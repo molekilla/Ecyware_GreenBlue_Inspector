@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.Configuration.Inspector</name>
+    </assembly>
+    <members>
+        <member name="T:ConfigurationManager.ConfigManager">
+            <summary>
+            Summary description for ConfigManager.
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.ConfigManager.Read(System.String)">
+            <summary>
+            Reads a section from the config.
+            </summary>
+            <param name="sectionName"> The configuration section name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:ConfigurationManager.ConfigManager.Write(System.String,System.Object)">
+            <summary>
+            Writes the data to the config.
+            </summary>
+            <param name="sectionName"> The configuration section name.</param>
+            <param name="value"> The value to write.</param>
+        </member>
+        <member name="T:ConfigurationManager.Configuration">
+            <summary>
+            Summary description for Configuration.
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.Configuration.LoadConfiguration(System.Type,System.Xml.XmlNode)">
+            <summary>
+            Loads the configuration.
+            </summary>
+            <returns> A Configuration type.</returns>
+        </member>
+        <member name="M:ConfigurationManager.Configuration.LoadConfiguration(System.Type,System.Xml.XmlNode,System.Type[])">
+            <summary>
+            Loads the configuration.
+            </summary>
+            <param name="instanceType"> The instance type.</param>
+            <param name="section"> The section data.</param>
+            <param name="types"> The overrided types for the schema.</param>
+            <returns> A Configuration type.</returns>
+        </member>
+        <member name="T:ConfigurationManager.ConfigurationManagementSettings">
+            <summary>
+            Summary description for ConfigurationManagementSettings.
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.#ctor">
+            <summary>
+            Creates the ConfigurationManagementSettings.
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.LoadSectionHandlers(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Loads the section handlers.
+            </summary>
+            <param name="node"> The XPathNavigator node.</param>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.LoadSectionHandlers(System.String,System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Loads the section handlers.
+            </summary>
+            <param name="parentLocalName"> The parent localname.</param>
+            <param name="node"> The XPathNavigator node.</param>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.GetAppConfigFile">
+            <summary>
+            Get the app config file.
+            </summary>
+            <returns> The first app config found in the list.</returns>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.ReadConfigNode(System.String,System.String)">
+            <summary>
+            Reads the configuation node.
+            </summary>
+            <param name="section"> The section handler name.</param>
+            <param name="configFile"> The configuration file.</param>
+            <returns> A XmlNode with the data.</returns>
+        </member>
+        <member name="M:ConfigurationManager.ConfigurationManagementSettings.WriteConfigNode(System.String,System.Xml.XmlNode,System.String)">
+            <summary>
+            Writes the configuration node.
+            </summary>
+            <param name="section"> The section handler name.</param>
+            <param name="node"> The XmlNode data.</param>
+            <param name="configFile"> The configuration file.</param>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator">
+            <summary>
+            Contains properties for locating the configuration sections.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator.InspectorSettings">
+            <summary>
+            Gets the application configuration settings.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator.HttpClientSettings">
+            <summary>
+            Gets the HTTP Client Configuration settings.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration">
+            <summary>
+            Contains the HttpClientConfiguration class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.#ctor">
+            <summary>
+            Creates a new HttpClientConfiguration.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.UserAgent">
+            <summary>
+            Gets or sets the user agent.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.SecurityProtocol">
+            <summary>
+            Gets or sets the security protocol.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.KeepAlive">
+            <summary>
+            Gets or sets the keep alive setting.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler">
+            <summary>
+            Contains the HttpClientSectionHandler class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler.#ctor">
+            <summary>
+            Creates a new HttpSectionHandler.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            Creates a new configuration section handler.
+            </summary>
+            <param name="parent"> The parent object.</param>
+            <param name="configContext"> The configuration context.</param>
+            <param name="section"> The section handler.</param>
+            <returns> An object with the configuration.</returns>
+        </member>
+        <member name="T:ConfigurationManager.IConfigurationSectionHandlerWriter">
+            <summary>
+            Implemented by custom section handlers in order to allow a writeable implementation
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.IConfigurationSectionHandlerWriter.Serialize(System.Object)">
+            <summary>
+            This method converts the public fields and read/write properties of an object into XML.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration">
+            <summary>
+            Contains the InspectorConfiguration class.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.ReferenceDataFile">
+            <summary>
+            Gets or sets the references data xml file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.SolutionDataFile">
+            <summary>
+            Gets or sets the solution data xml file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.XssSignatures">
+            <summary>
+            Gets or sets the XSS attack signature list.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.SqlSignatures">
+            <summary>
+            Gets or sets the SQL Injection signature list.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.BasicReportTemplate">
+            <summary>
+            Gets or sets the the basic report template file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.AdvancedReportTemplate">
+            <summary>
+            Gets or sets the the advanced report template file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultSqlTest">
+            <summary>
+            Gets or sets the default SQL Injection test for the easy unit test action.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultXssTest">
+            <summary>
+            Gets or sets the default XSS attack test for the easy unit test action.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultBufferOverflowLength">
+            <summary>
+            Gets or sets the default length of the buffer overflow for the easy unit test action.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.InspectorSectionHandler">
+            <summary>
+            Contains the InspectorSectionHandler class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.InspectorSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            Creates a new configuration section handler.
+            </summary>
+            <param name="parent"> The parent object.</param>
+            <param name="configContext"> The configuration context.</param>
+            <param name="section"> The section handler.</param>
+            <returns> An object with the configuration.</returns>
+        </member>
+        <member name="T:ConfigurationManager.Provider">
+            <summary>
+            Summary description for Provider.
+            </summary>
+        </member>
+        <member name="T:ConfigurationManager.SimpleConfiguration">
+            <summary>
+            Summary description for SimpleConfiguration.
+            </summary>
+        </member>
+        <member name="M:ConfigurationManager.SimpleConfiguration.#ctor">
+            <summary>
+            Creates a new SimpleConfiguration.
+            </summary>
+        </member>
+        <member name="P:ConfigurationManager.SimpleConfiguration.Providers">
+            <summary>
+            Gets or sets the providers.
+            </summary>
+        </member>
+        <member name="T:ConfigurationManager.SimpleSectionHandler">
+            <summary>
+            Summary description for SimpleConfigurationHandler.
+            </summary>
+        </member>
+        <member name="T:ConfigurationManager.SkipSerializerNamespacesWriter">
+            <summary>
+            Summary description for SkipSerializerNamespacesReader.
+            </summary>
+        </member>
+    </members>
+</doc>

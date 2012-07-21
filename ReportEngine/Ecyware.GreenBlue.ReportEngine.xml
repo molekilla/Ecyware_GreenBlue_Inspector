@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.ReportEngine</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.ReportEngine.ReportCommand">
+            <summary>
+            Contains the report command logic.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.#ctor">
+            <summary>
+            Creates a new ReportCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.GetSolutionDescription(System.String,System.String)">
+            <summary>
+            Gets the solution description.
+            </summary>
+            <param name="id"> The solution id.</param>
+            <param name="solutionDataFilePath"> The file path to the solution xml file.</param>
+            <returns> A string with the solution description.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.GetReferenceDescription(System.String,System.String)">
+            <summary>
+            Gets the reference description.
+            </summary>
+            <param name="id"> The solution id.</param>
+            <param name="referenceDataFilePath"> The file path to the reference xml file.</param>
+            <returns> A string with the reference description.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.CreateHtmlReport(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.String,System.String,System.String)">
+            <summary>
+            Creates the html report.
+            </summary>
+            <param name="report"> The report type.</param>
+            <param name="reportTemplateFileName"> The name of the report template.</param>
+            <returns> The html string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.BuildHtmlReport(System.Data.DataSet,System.String)">
+            <summary>
+            Creates a report in html using a XSLT Template.
+            </summary>
+            <param name="dataset"> The HtmlUnitTestReport to load.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.SerializeToXml(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.IO.Stream)">
+            <summary>
+            Serialize to xml.
+            </summary>
+            <param name="ds"> The HtmlUnitTestReport.</param>
+            <param name="file"> The stream to serialize the xml.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.SerializeToSchema(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.IO.Stream)">
+            <summary>
+            Serialize to schema.
+            </summary>
+            <param name="ds"> The HtmlUnitTestReport.</param>
+            <param name="file"> The stream to serialize the schema.</param>
+        </member>
+    </members>
+</doc>

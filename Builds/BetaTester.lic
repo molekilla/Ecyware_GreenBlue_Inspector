@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Licenses>
+	<License signature="fBJR1nLIyTCYU6v+73x1IfZML3eCmDcmyI2EJyePHTgBOZqtE8b394R0o8Bu7kjUF09RQ87vw7mHbaYqPeOKmZvL/iGY3VTVbf3QNc5KJcgu853NjOdBQvAPRstraTDfg+/76xkUEoxyLEDJ6kWsbLrrjfztPRebFjqSXM7JE+Y=" version="2.0" assemblyName="Ecyware.GreenBlue.Controls">
+		<Expires>2004-06-11T00:00:00</Expires>
+		<SerialNumber>9F9B0465-372D-49EE-9972-E09D0B847E2F</SerialNumber>
+		<Limits>
+			<Limit type="Trial" terms="" started="2004-03-23T00:00:00" ends="2004-05-31T00:00:00" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<Meta>
+			<Values>
+				<Value key="LicenseTemplate" value="QwBVAIIAHQDOAEQA/QB7ABkAigB2AIMAXQDPAHcA8gCsAAcAhgB4AOMARwDSAJEADQC4AGgA+QBNAPAAZwAfAJMAJgDQAEoAwAB9AEgAxwBoAJsAYgDAAHkA8wCeAAAApABaAN0AQQDJAJgAEwCuACkAxQBDALsAQwABAIcANACuAG0A8gB4ABkAxQAZAKYAVgDTAGQA6gCYABAAjgByAIAAPwDKAJwAFQD7AB4AywBBAPYAagBbAIgAOgC2AA==" />
+			</Values>
+		</Meta>
+	</License>
+	<License signature="p1I6velJBLFOn/DU+R3J95yNfFtbiSSLy1mfQXSCeblKSpDO0H9vL4IZCjmQLZE2qqvyqeskgCOt8g7YYF6bj0qTCEIFpToHtuKfoweIxITDfqqJa3XpQXFL9m+UkZbY5raBcuDFLxGS31E6eXx+zZOTJA5kHi+EathWr0bS8Kg=" version="2.0" assemblyName="GBInspector">
+		<Expires>2004-06-11T00:00:00</Expires>
+		<SerialNumber>0AD1CD16-1DF0-4DE9-A6B3-72CB10CF4618</SerialNumber>
+		<Limits>
+			<Limit type="Trial" terms="" started="2004-03-23T00:00:00" ends="2004-05-31T00:00:00" />
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+		<Meta>
+			<Values>
+				<Value key="LicenseTemplate" value="QwBVAIIAHQDOAEQA/QB7ABkAigB2AIMAXQDPAHcA8gCsAAcAhgB4AOMARwDSAJEADQC4AGgA+QBNAPAAZwAfAJMAJgDQAEoAwAB9AEgAxwBoAJsAYgDAAHkA8wCeAAAApABaAN0AQQDLALkAIwC3ADsAxwBDAPYAcAAcAJAADQDzAB8AvgBJAB0AkgB6AJ0ASgDOAHcA6QDaAA8AuwA1AA==" />
+			</Values>
+		</Meta>
+	</License>
+	<License signature="T3PWHIv5Lp9ghmtmnd1Ra3cZ1Nl77iLvNcy+iTH90pG4X5r8uYjMwuz1kBlWqFNF+TBRMryA6jjb2a6lNEQkV2qbEp+tP3hej+wBgXjZme0LZP8811drorujnOsge4h+qSM7DY3cI07PPpMQ0AEBLuDIIDMOU1P91RLqS3/Q7NM=" version="2.0" assemblyName="Ecyware.LicenseType.IPLimit, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+		<Expires>2104-04-11T00:00:00</Expires>
+		<SerialNumber>79E56394-8E3F-4D83-A1EC-A8DFCD596775</SerialNumber>
+		<Limits>
+			<Limit type="UriLimit" isUnlimited="true" netType="Ecyware.LicenseType.IPLimit.UriLimit,Ecyware.LicenseType.IPLimit">
+				<iplist>
+					<ip>127.0.0.1</ip>
+				</iplist>
+			</Limit>
+		</Limits>
+		<Values>
+			<Value key="__XL_PRO" value="TRUE" />
+		</Values>
+	</License>
+</Licenses>

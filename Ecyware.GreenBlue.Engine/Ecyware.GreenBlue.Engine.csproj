@@ -1,0 +1,758 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5C59F497-84B7-455C-80A9-0919833D57FE}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Ecyware.GreenBlue.Engine</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ecyware.GreenBlue.Engine</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile />
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BufferOverflowGenerator\Ecyware.GreenBlue.Utils.csproj">
+      <Name>Ecyware.GreenBlue.Utils</Name>
+      <Project>{557DCB68-183B-4D4A-8CE3-83398F655B43}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecyware.GreenBlue.Configuration\Ecyware.GreenBlue.Configuration.csproj">
+      <Name>Ecyware.GreenBlue.Configuration</Name>
+      <Project>{61B3CAF1-E079-4967-BEE7-2CAD604907AF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="Atomizer">
+      <Name>Atomizer</Name>
+      <HintPath>..\..\GreenBlueWeb\Atomizer\bin\Release\Atomizer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement">
+      <Name>Microsoft.ApplicationBlocks.ExceptionManagement</Name>
+      <HintPath>..\..\Microsoft\Microsoft.ApplicationBlocks.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <Name>Microsoft.mshtml</Name>
+      <HintPath>D:\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+      <AssemblyFolderKey>hklm\primary interop assemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Security">
+      <Name>System.Security</Name>
+    </Reference>
+    <Reference Include="System.Web">
+      <Name>System.Web</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppLocation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseHttpForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseHttpState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BufferBuilder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BufferOverflowGenerator.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BufferOverflowTesterArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CompareString.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Converter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CookieManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypesTesterArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataTypeTestHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="EncodeDecode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ExceptionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GetForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GetSessionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\FormConverter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\FormHeuristic.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\HtmlLightParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\HtmlLightParserElement.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\HtmlParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\HtmlParserProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\HtmlQueryUtil.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\NameObjectCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\SgmlParser.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlCommand\SgmlReader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlALinkTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlAnchorTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlButtonTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlFormTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlFormTagCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlFormTagXml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlInputTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlLinkTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlOptionCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlOptionTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlScript.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlScriptCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlSelectTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlTagBase.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlTagBaseCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlTagBaseList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlTagListXml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\HtmlTextAreaTag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\IHtmlScriptList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\IHtmlTagBaseList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlDom\PostDataCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpAuthentication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpClientSectionHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpPipeline.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpProperties.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpProxy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpRequestType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IHtmlFormUnitTestArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InspectorPipelineApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InspectorPipelineCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPipelineCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="IPNotFoundException.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ISessionRequestList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PacketStateData.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PipelineApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostForm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PostSessionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PredefinedTesterArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResponseBuffer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ResponseEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\Argument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ArgumentProperty.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\Cookie.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\Cookies.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\CurrentArgumentState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\DeleteWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\FileReference.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\GetWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\HtmlTextResultEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\HttpRequestResponseContext.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\PostWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\PutWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\RequestStartEndEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplication.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplicationArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplicationArgsSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplicationPackage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplicationSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingHttpState.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingRequestClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\SessionScriptingPipelineCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\SoapHttpWebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebRequestArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebResponse.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Session.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionAbortEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionCommandProcessEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionDocument.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionRequest.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SessionRequestList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Smtp\SmtpClient.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlInjectionTesterArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SSLCertificatePolicy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Test.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\AddTransformAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\BloggerTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\ClientSettingsTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\CookiesTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\CookieTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\DatabaseTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\DefaultTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\BloggerTransportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\ClientSettingsTransformValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\CookiesTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\CookiesTransformValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\DatabaseTransportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\DefaultTransformValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\FillFormTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\FillXmlTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\GMailSmtpTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\GmailTransportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\HeaderTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\HeaderTransformValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\HtmlTransformValueDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\QueryTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\RegExQueryCommandDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\RequestTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\ResponseResultTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\SecurityTransformDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\SmtpTransportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\UITransformEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Transforms\Designers\XPathQueryCommandDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transforms\FillFormTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\FillXmlTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\FormField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\GmailSmtpTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\GmailTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\HeaderTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\HeaderTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\HtmlTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\NameValueObject.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\QueryCommandAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\QueryTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\RegExQueryCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\RemoveTransformAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\RequestTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\ResponseResultTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\SecurityTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\SecurityTransformAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\SecurityTransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\SmtpTransport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\TransformAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\TransformProvider.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\TransformValue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\TransformValueTypeMember.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\Transport.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\UITransformEditorAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\UpdateTransformAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\WebTestTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\WebTransform.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\WebTransformAttribute.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\WebTransformConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\WebTransformConfigurationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\XmlElementField.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Transforms\XPathQueryCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitTestItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitTestResult.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UnitTestType.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UploadFileInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UriResolver.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WebHeader.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="WorkerProcess.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XmlItemList.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XsltCommand.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="XssInjectionTesterArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="BaseHttpForm.resx">
+      <DependentUpon>BaseHttpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Html.dtd" />
+    <EmbeddedResource Include="HtmlCommand\Html.dtd" />
+    <EmbeddedResource Include="HtmlDom\Html.dtd" />
+    <EmbeddedResource Include="Transforms\Designers\BloggerTransportDialog.resx">
+      <DependentUpon>BloggerTransportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\ClientSettingsTransformValueDialog.resx">
+      <DependentUpon>ClientSettingsTransformValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\CookiesTransformDesigner.resx">
+      <DependentUpon>CookiesTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\CookiesTransformValueDialog.resx">
+      <DependentUpon>CookiesTransformValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\DatabaseTransportDialog.resx">
+      <DependentUpon>DatabaseTransportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\DefaultTransformValueDialog.resx">
+      <DependentUpon>DefaultTransformValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\FillFormTransformDesigner.resx">
+      <DependentUpon>FillFormTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\FillXmlTransformDesigner.resx">
+      <DependentUpon>FillXmlTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\GMailSmtpTransformDesigner.resx">
+      <DependentUpon>GMailSmtpTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\GmailTransportDialog.resx">
+      <DependentUpon>GmailTransportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\HeaderTransformDesigner.resx">
+      <DependentUpon>HeaderTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\HeaderTransformValueDialog.resx">
+      <DependentUpon>HeaderTransformValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\HtmlTransformValueDialog.resx">
+      <DependentUpon>HtmlTransformValueDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\QueryTransformDesigner.resx">
+      <DependentUpon>QueryTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\RegExQueryCommandDialog.resx">
+      <DependentUpon>RegExQueryCommandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\RequestTransformDesigner.resx">
+      <DependentUpon>RequestTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\ResponseResultTransformDesigner.resx">
+      <DependentUpon>ResponseResultTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\SecurityTransformDesigner.resx">
+      <DependentUpon>SecurityTransformDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\SmtpTransportDialog.resx">
+      <DependentUpon>SmtpTransportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\UITransformEditor.resx">
+      <DependentUpon>UITransformEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transforms\Designers\XPathQueryCommandDialog.resx">
+      <DependentUpon>XPathQueryCommandDialog.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

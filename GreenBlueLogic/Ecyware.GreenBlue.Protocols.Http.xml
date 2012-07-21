@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.Protocols.Http</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl">
+            <summary>
+            Summary description for BasicHtmlEditorControl.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.#ctor">
+            <summary>
+            Creates a new BasicHtmlEditorControl.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.LoadDocument(System.String)">
+            <summary>
+            Loads a document.
+            </summary>
+            <param name="body"></param>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.ToolbarVisible">
+            <summary>
+            Gets or sets the toolbar visible.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.IsDesignMode">
+            <summary>
+            Gets or sets the design mode.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.BodyInnerHtml">
+            <summary>
+            Gets or sets the BODY inner html.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.BasicHtmlEditorControl.BodyOuterHtml">
+            <summary>
+            Gets or sets the BODY outer html.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm">
+            <summary>
+            Summary description for ScriptingApplicationArgumentDesignerForm.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.#ctor">
+            <summary>
+            Creates a new ScriptingApplicationArgumentDesignerForm.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.#ctor(Ecyware.GreenBlue.Engine.Scripting.ScriptingApplicationArgs)">
+            <summary>
+            Creates a new ScriptingApplicationArgumentDesignerForm.
+            </summary>
+            <param name="args"> The arguments to load.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.LoadArguments">
+            <summary>
+            Load the arguments.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentDesignerForm.ScriptingApplicationArgs">
+            <summary>
+            Gets or sets the application arguments.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm">
+            <summary>
+            Summary description for ScriptingApplicationArgumentForm.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.#ctor">
+            <summary>
+            Creates a new ScriptingApplicationArgumentForm.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.#ctor(Ecyware.GreenBlue.Engine.Scripting.ScriptingApplication,Ecyware.GreenBlue.Engine.Scripting.ScriptingApplicationArgs)">
+            <summary>
+            Creates a new ScriptingApplicationArgumentForm.
+            </summary>
+            <param name="application"> The ScriptingApplication type.</param>
+            <param name="arguments"> The ScriptingApplicationArgs type.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.RunScriptingApplication(System.String)">
+            <summary>
+            Runs the scripting application as a Windows Form application.
+            </summary>
+            <param name="file"> The ScriptingApplication or ScriptingApplicationPackage to run.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.SaveArguments">
+            <summary>
+            Saves the arguments.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.LoadArguments">
+            <summary>
+            Load the arguments.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.LoadComboValues(System.Int32,System.Windows.Forms.ComboBox,System.String)">
+            <summary>
+            Loads the combo values.
+            </summary>
+            <param name="webRequestIndex"> The web request index.</param>
+            <param name="combo"> The combo box to load.</param>
+            <param name="htmlElementName"> The HTML Element name.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.LoadDesignerControlValue(Ecyware.GreenBlue.Engine.Scripting.ArgumentProperty.DesignerControl,System.Windows.Forms.Control)">
+            <summary>
+            Loads the designer control value.
+            </summary>
+            <param name="designerControlType"> The designer control type.</param>
+            <param name="control"> The control.</param>
+            <returns> A string representing the value.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.CreateDesignerControl(System.Int32,Ecyware.GreenBlue.Engine.Scripting.Argument)">
+            <summary>
+            Creates a designer control.
+            </summary>
+            <param name="webRequestIndex"> The web request index.</param>
+            <param name="argument"> An argument.</param>
+            <returns>A control.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.btnNextRequest_Click(System.Object,System.EventArgs)">
+            <summary>
+            Saves the values and displays the next window.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.SendRequestResponse">
+            <summary>
+            Sends a request response instead of batch mode.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.LoadWebRequestInputForm">
+            <summary>
+            Loads the web request input form.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.ScriptingApplicationArgs">
+            <summary>
+            Gets or sets the ScriptingApplicationArgs.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Protocols.Http.Scripting.ScriptingApplicationArgumentForm.ScriptingApplication">
+            <summary>
+            Gets the scripting application.
+            </summary>
+        </member>
+    </members>
+</doc>

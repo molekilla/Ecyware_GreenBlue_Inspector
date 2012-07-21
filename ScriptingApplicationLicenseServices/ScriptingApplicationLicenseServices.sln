@@ -1,0 +1,90 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecyware.GreenBlue.LicenseServices", "Ecyware.GreenBlue.LicenseServices.csproj", "{65C51168-A5D8-4EC6-B173-C74F6E5FE63A}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecyware.GreenBlue.Configuration", "..\Ecyware.GreenBlue.Configuration\Ecyware.GreenBlue.Configuration.csproj", "{61B3CAF1-E079-4967-BEE7-2CAD604907AF}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ecyware.GreenBlue.LicenseServices.Client", "..\ScriptingApplicationLicenseServices.Client\Ecyware.GreenBlue.LicenseServices.Client.csproj", "{046984AB-CDA1-4A3D-8461-4CAD494913FD}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenserServiceClientTest", "LicenserServiceClientTest\LicenserServiceClientTest.csproj", "{8E4445A3-6899-4FE8-BB84-21344F1348DE}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenserServiceServerTest", "LicenserServiceServerTest\LicenserServiceServerTest.csproj", "{21952100-1F18-45F5-9192-B8E6C593B750}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KeyGenerator", "KeyGenerator\KeyGenerator.csproj", "{44130C94-72A3-4CE6-9F95-4C9E717B12E7}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 7
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SolutionUniqueID = {6E5C37C1-9265-445A-A1F2-432546E5F918}
+		SccProjectUniqueName1 = ..\\Ecyware.GreenBlue.Configuration\\Ecyware.GreenBlue.Configuration.csproj
+		SccProjectName1 = \u0022$/GreenBlueProject.root/GreenBlueProject/Ecyware.GreenBlue.Configuration\u0022,\u0020WNAAAAAA
+		SccLocalPath1 = ..\\Ecyware.GreenBlue.Configuration
+		CanCheckoutShared = false
+		SccProjectUniqueName2 = Ecyware.GreenBlue.LicenseServices.csproj
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName3 = ..\\ScriptingApplicationLicenseServices.Client\\Ecyware.GreenBlue.LicenseServices.Client.csproj
+		SccProjectName3 = \u0022$/ScriptingApplicationLicenseServices.root/ScriptingApplicationLicenseServices.Client\u0022,\u0020LFBAAAAA
+		SccLocalPath3 = ..\\ScriptingApplicationLicenseServices.Client
+		CanCheckoutShared = false
+		SccProjectUniqueName4 = LicenserServiceClientTest\\LicenserServiceClientTest.csproj
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = LicenserServiceClientTest\\
+		SccProjectUniqueName5 = LicenserServiceServerTest\\LicenserServiceServerTest.csproj
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = LicenserServiceServerTest\\
+		SccProjectUniqueName6 = KeyGenerator\\KeyGenerator.csproj
+		SccLocalPath6 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection6 = KeyGenerator\\
+	EndGlobalSection
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{65C51168-A5D8-4EC6-B173-C74F6E5FE63A}.Debug.ActiveCfg = Debug|.NET
+		{65C51168-A5D8-4EC6-B173-C74F6E5FE63A}.Debug.Build.0 = Debug|.NET
+		{65C51168-A5D8-4EC6-B173-C74F6E5FE63A}.Release.ActiveCfg = Release|.NET
+		{65C51168-A5D8-4EC6-B173-C74F6E5FE63A}.Release.Build.0 = Release|.NET
+		{61B3CAF1-E079-4967-BEE7-2CAD604907AF}.Debug.ActiveCfg = Debug|.NET
+		{61B3CAF1-E079-4967-BEE7-2CAD604907AF}.Debug.Build.0 = Debug|.NET
+		{61B3CAF1-E079-4967-BEE7-2CAD604907AF}.Release.ActiveCfg = Release|.NET
+		{61B3CAF1-E079-4967-BEE7-2CAD604907AF}.Release.Build.0 = Release|.NET
+		{046984AB-CDA1-4A3D-8461-4CAD494913FD}.Debug.ActiveCfg = Debug|.NET
+		{046984AB-CDA1-4A3D-8461-4CAD494913FD}.Debug.Build.0 = Debug|.NET
+		{046984AB-CDA1-4A3D-8461-4CAD494913FD}.Release.ActiveCfg = Release|.NET
+		{046984AB-CDA1-4A3D-8461-4CAD494913FD}.Release.Build.0 = Release|.NET
+		{8E4445A3-6899-4FE8-BB84-21344F1348DE}.Debug.ActiveCfg = Debug|.NET
+		{8E4445A3-6899-4FE8-BB84-21344F1348DE}.Debug.Build.0 = Debug|.NET
+		{8E4445A3-6899-4FE8-BB84-21344F1348DE}.Release.ActiveCfg = Release|.NET
+		{8E4445A3-6899-4FE8-BB84-21344F1348DE}.Release.Build.0 = Release|.NET
+		{21952100-1F18-45F5-9192-B8E6C593B750}.Debug.ActiveCfg = Debug|.NET
+		{21952100-1F18-45F5-9192-B8E6C593B750}.Debug.Build.0 = Debug|.NET
+		{21952100-1F18-45F5-9192-B8E6C593B750}.Release.ActiveCfg = Release|.NET
+		{21952100-1F18-45F5-9192-B8E6C593B750}.Release.Build.0 = Release|.NET
+		{44130C94-72A3-4CE6-9F95-4C9E717B12E7}.Debug.ActiveCfg = Debug|.NET
+		{44130C94-72A3-4CE6-9F95-4C9E717B12E7}.Debug.Build.0 = Debug|.NET
+		{44130C94-72A3-4CE6-9F95-4C9E717B12E7}.Release.ActiveCfg = Release|.NET
+		{44130C94-72A3-4CE6-9F95-4C9E717B12E7}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

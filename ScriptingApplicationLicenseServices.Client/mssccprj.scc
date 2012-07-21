@@ -1,0 +1,9 @@
+SCC = This is a Source Code Control file
+
+[ScriptingApplicationLicenseServices.Client.csproj]
+SCC_Aux_Path = "E:\my software code\VSSDB"
+SCC_Project_Name = "$/ScriptingApplicationLicenseServices.root/ScriptingApplicationLicenseServices.Client", LFBAAAAA
+
+[Ecyware.GreenBlue.LicenseServices.Client.csproj]
+SCC_Aux_Path = "C:\my software code\VSSDB"
+SCC_Project_Name = "$/ScriptingApplicationLicenseServices.root/ScriptingApplicationLicenseServices.Client", LFBAAAAA

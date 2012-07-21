@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.ReportEngine</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.ReportEngine.ReportCommand">
+            <summary>
+            Summary description for ReportEngine.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.#ctor">
+            <summary>
+            Creates a new ReportCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.BasicHtmlReport(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.String)">
+            <summary>
+            Creates the basic html report.
+            </summary>
+            <param name="report"> The report type.</param>
+            <param name="reportTemplateFileName"> The name of the report template.</param>
+            <returns> The html string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.AdvancedHtmlReport(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.String)">
+            <summary>
+            Creates the advanced html report.
+            </summary>
+            <param name="report"> The report type.</param>
+            <param name="reportTemplateFileName"> The name of the report template.</param>
+            <returns> The html string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.CreateHtmlReport(System.Data.DataSet,System.String)">
+            <summary>
+            Creates a report in html using a XSLT Template.
+            </summary>
+            <param name="dataset"> The HtmlUnitTestReport to load.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+    </members>
+</doc>

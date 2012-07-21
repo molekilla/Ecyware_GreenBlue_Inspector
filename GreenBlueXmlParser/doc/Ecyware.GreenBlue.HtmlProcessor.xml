@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.HtmlCommand</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.HtmlCommand.FormConverter">
+            <summary>
+            Contains logic for converting a MSHTML Form Element to a GB HtmlFormTag.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.#ctor">
+            <summary>
+            Creates a new FormConverter.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertToHtmlFormTag(mshtml.HTMLFormElementClass)">
+            <summary>
+            Converts a HTMLFormElementClass to a GB HtmlFormTag.
+            </summary>
+            <param name="formElement"> The HTMLFormElementClass to convert.</param>
+            <returns> A HtmlFormTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.CreateHtmlSelectTag(mshtml.HTMLSelectElementClass)">
+            <summary>
+            Creates a HtmlSelectTag from a HTMLSelectElementClass.
+            </summary>
+            <param name="selectElement"> The HTMLSelectElementClass to convert.</param>
+            <returns> A HtmlSelectTag</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.CreateHtmlTextAreaTag(mshtml.HTMLTextAreaElementClass)">
+            <summary>
+            Creates a HtmlTextAreaTag from a HTMLTextAreaElementClass.
+            </summary>
+            <param name="textareaElement"> The HTMLTextAreaElementClass to convert.</param>
+            <returns> A HtmlTextAreaTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.CreateHtmlButtonTag(mshtml.HTMLInputButtonElementClass)">
+            <summary>
+            Creates a HtmlButtonTag from a HTMLInputElementClass.
+            </summary>
+            <param name="buttonElement"> The HTMLInputElementClass to convert.</param>
+            <returns> A HtmlButtonTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.CreateHtmlInputTag(mshtml.HTMLInputElementClass)">
+            <summary>
+            Creates a HtmlInputTag from a HTMLInputElementClass.
+            </summary>
+            <param name="inputElement"> The HTMLInputElementClass to convert.</param>
+            <returns> A HtmlInputTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ParseTags(System.Collections.ArrayList,mshtml.IHTMLElementCollection)">
+            <summary>
+            Recursively parses the element tag collection to an ArrayList.
+            </summary>
+            <param name="list"> The list where the items are added.</param>
+            <param name="coll"> The element collection.</param>
+            <returns> An ArrayList with the parsed tags.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertPostDataString(System.String)">
+            <summary>
+            Converts the post data string to a Hashtable.
+            </summary>
+            <param name="data"> The post data string.</param>
+            <returns> A Hashtable representation of the post data.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertQueryString(System.String,System.String,System.String)">
+            <summary>
+            Converts the post data string to a Hashtable.
+            </summary>
+            <param name="data"> The post data string.</param>
+            <param name="separator"> The main separator for the string.</param>
+            <param name="nameValueSeparator"> The name value pair separator.</param>
+            <returns> A Hashtable representation of the query string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertQueryHashtable(System.Collections.Hashtable,System.String,System.String)">
+            <summary>
+            Converts a Hashtable containing a query string representation to string.
+            </summary>
+            <param name="data"> The Hashtable data.</param>
+            <param name="separator"> The separatos.</param>
+            <param name="nameValueSeparator"> The name value pair separator.</param>
+            <returns> A string representation of the query string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertPostDataHashtable(System.Collections.Hashtable)">
+            <summary>
+            Converts the hashtable to a post data string.
+            </summary>
+            <param name="data"> The post data hashtable.</param>
+            <returns> A string representation of the post data.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.ConvertPostDataArrayList(System.Collections.Hashtable)">
+            <summary>
+            Convertst the hashtable to a post data ArrayList.
+            </summary>
+            <param name="data"> The post data hashtable.</param>
+            <returns> An ArrayList representation of the post data.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.AddPostDataValues(Ecyware.GreenBlue.HtmlDom.HtmlFormTag,System.String)">
+            <summary>
+            Adds post data values for a form tag.
+            </summary>
+            <param name="formTag"> The HtmlFormTag.</param>
+            <param name="postDataString"> The post data as a string.</param>
+            <returns> An updated HtmlFormTag with the post data values.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormConverter.SetTagValue(System.Collections.Hashtable,Ecyware.GreenBlue.HtmlDom.HtmlTagBase,System.Int32)">
+            <summary>
+            Sets the post data value to an element tag.
+            </summary>
+            <param name="postData"> The post data hashtable.</param>
+            <param name="tag"> The current tag base.</param>
+            <param name="index"> The index of the element.</param>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlCommand.FormHeuristic">
+            <summary>
+            Contains logic for lookup and match of a post data structure and the corresponding form.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormHeuristic.#ctor">
+            <summary>
+            Creates a new FormHeuristic type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.FormHeuristic.MatchPostDataToForm(Ecyware.GreenBlue.HtmlDom.HtmlFormTagCollection,System.String)">
+            <summary>
+            Matches the post data to a form in a form collection.
+            </summary>
+            <param name="formCollection"> The form collection.</param>
+            <param name="data"> The post data string.</param>
+            <returns> A HtmlFormTag.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlCommand.HtmlParser">
+            <summary>
+            Contains logic for parsing HTML.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.#ctor">
+            <summary>
+            Creates a new HtmlParser object.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.#ctor(Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties)">
+            <summary>
+            Creates a new HtmlParser object.
+            </summary>
+            <param name="properties"> The Html Parser properties to apply.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new HtmlParser object.
+            </summary>
+            <param name="removeScripts"> Removes SCRIPT tags.</param>
+            <param name="removeStyle"> Removes STYLE tags.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.GetParsableString(System.String)">
+            <summary>
+            Parse a HTML to XML and returns a string, if error occurs returns an exception.
+            </summary>
+            <remarks> Use this method when you want to catch a parsing error.</remarks>
+            <param name="html"> HTML string to parse.</param>
+            <returns>A string with the parsed value.</returns>	
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.RemoveStartEndTags(System.String,System.String,System.String,System.String)">
+            <summary>
+            Removes a tag using the starting tag and end tag.
+            </summary>
+            <param name="html"> The HTML source to parse.</param>
+            <param name="tagName"> The tag name.</param>
+            <param name="startTag"> The start tag.</param>
+            <param name="endTag"> The end tag.</param>
+            <returns> A string with the cleaned HTML.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.RemoveTabs(System.String)">
+            <summary>
+            Removes any tabs
+            </summary>
+            <param name="html">HTML string to parse.</param>
+            <returns>A string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.PostProcessHtml(System.String)">
+            <summary>
+            Post process the html.
+            </summary>
+            <param name="html"> The HTML source to parse.</param>
+            <returns> A string with the cleaned HTML.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.PreNormalizeNamespaces(System.String)">
+            <summary>
+            Pre parse any existing namespaces found in the HTML.
+            </summary>
+            <param name="html"> The HTML source to parse.</param>
+            <returns> A string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.PostNormalizeNamespaces(System.String)">
+            <summary>
+            Post parse any existing namespaces found in the HTML.
+            </summary>
+            <param name="html"> The HTML source to parse.</param>
+            <returns> A string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.PreProcessHtml(System.String)">
+            <summary>
+            Pre parses the HTML.
+            </summary>
+            <param name="html"> The HTML source to parse.</param>
+            <returns> A string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.CheckDocument(System.String)">
+            <summary>
+            Validates that the data is a valid XPathDocument.
+            </summary>
+            <remarks> CheckDocument tries to parse HTML code. In case an exception is found related to namespace resolving, it will try to add them to the HTML.
+            If the namespace resolving cannot be handle, it throws the exception.</remarks>
+            <param name="sr"> The HTML source to validate.</param>
+            <returns> An XPathDocument of the html source.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.HasForms(System.String)">
+            <summary>
+            Verifies that HTML Document has forms.
+            </summary>
+            <param name="html"> The parsed HTML string.</param>
+            <returns> Returns true if HTML Document contains forms, else false.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.GetMetaRedirectUrlString(System.String)">
+            <summary>
+            Gets the META tag redirect url if any.
+            </summary>
+            <param name="htmlContent"> The HTML content to parse.</param>
+            <returns> Returns empty if no meta tag url found, else a url segment.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.GetFormElementValue(System.String,System.String,System.String)">
+            <summary>
+            Get the element value by type and name attribute value.
+            </summary>
+            <param name="elementType"> The element type.</param>
+            <param name="name"> The name value.</param>
+            <param name="htmlContent"> The html content to parse.</param>
+            <returns> A value from a Form Element.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.GetFormActionByAbsoluteUrl(System.String,System.String)">
+            <summary>
+            Gets the ACTION url by absolute url.
+            </summary>
+            <param name="url"> The absolute url.</param>
+            <param name="htmlContent"> The parsed HTML content.</param>
+            <returns> A string with the form action.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ResolveNamespaces(System.IO.StringReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A StringReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ResolveNamespaces(System.Xml.XmlTextReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A XmlTextReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.BeginLoadForm(System.String,System.AsyncCallback,System.Object)">
+            <summary>
+            Begins the loading of forms into a HtmlFormTagCollection.
+            </summary>
+            <param name="html"> The parsed HTML content.</param>
+            <param name="callback"> The AsyncCallback delegate.</param>
+            <param name="state"> The callback state.</param>
+            <returns> An IAsyncResult.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.EndLoadFrom(System.IAsyncResult)">
+            <summary>
+            Callback method for BeginLoadForm.
+            </summary>
+            <param name="asyncResult"> The IAsyncResult.</param>
+            <returns> A HtmlFormTagCollection</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.LoadForm(System.String)">
+            <summary>
+            Loads the forms into a HtmlFormTagCollection.
+            </summary>
+            <param name="html"> The parsed HTML content.</param>
+            <returns> Returns a HtmlFormTagCollection with the forms contained in the HTML.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.AddCommonTag(Ecyware.GreenBlue.HtmlDom.HtmlFormTag,System.String,System.String,System.String)">
+            <summary>
+            Adds a common tag.
+            </summary>
+            <param name="form"> The HtmlFormTag.</param>
+            <param name="click"> The click event source code.</param>
+            <param name="id"> The element id.</param>
+            <param name="name"> The element name.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.CreateLinkTag(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates a link tag.
+            </summary>
+            <param name="currentNode"> The XPathNavigator node.</param>
+            <returns> A HtmlALinkTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.CreateSelectTag(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates a select tag.
+            </summary>
+            <param name="currentNode"> The XPathNavigator node.</param>
+            <returns> A HtmlSelectTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.FillTextAreaTag(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates a textarea tag.
+            </summary>
+            <param name="currentNode"> The XPathNavigator node.</param>
+            <returns> A HtmlTextAreaTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.FillButtonTag(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates a button tag.
+            </summary>
+            <param name="currentNode"> The XPathNavigator node.</param>
+            <returns> A HtmlButtonTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.FillInputTag(System.Xml.XPath.XPathNavigator)">
+            <summary>
+            Creates a input tag.
+            </summary>
+            <param name="currentNode"> The XPathNavigator node.</param>
+            <returns> A HtmlInputTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ProcessSpecialFields(Ecyware.GreenBlue.HtmlDom.HtmlFormTag)">
+            <summary>
+            Process a HtmlFormTag radio fields.
+            </summary>
+            <param name="form"> The HtmlFormTag.</param>
+            <returns> An updated HtmlFormTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ConvertToArrayList(Ecyware.GreenBlue.HtmlDom.HtmlFormTag)">
+            <summary>
+            Converts the HtmlFormTag to a Hashtable.
+            </summary>
+            <param name="form"> HtmlFormTag to convert.</param>
+            <returns> A Hashtable type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ConvertToArrayList(Ecyware.GreenBlue.HtmlDom.HtmlFormTag,System.String)">
+            <summary>
+            Converts the HtmlFormTag to a Hashtable and checks for updated values in html content.
+            </summary>
+            <param name="form"> HtmlFormTag to convert.</param>
+            <returns> A Hashtable type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ConvertToArrayList(Ecyware.GreenBlue.HtmlDom.HtmlFormTag,System.String,System.Collections.Specialized.StringCollection)">
+            <summary>
+            Converts the HtmlFormTag to a Hashtable and checks for updated values in html content.
+            </summary>
+            <param name="form"> HtmlFormTag to convert.</param>
+            <param name="elementNames"> The list of elements to update.</param>
+            <returns> A Hashtable type.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParser.GetRegExpParserScripts">
+            <summary>
+            Gets or sets the regular expressions to parse scripts.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParser.NamespaceCache">
+            <summary>
+            Gets or sets the NamespaceCache.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParser.DocumentCache">
+            <summary>
+            Gets or sets the DocumentCache.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParser.ParserProperties">
+            <summary>
+            Gets or sets the parser properties.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties">
+            <summary>
+            Contains the parser properties.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.#ctor">
+            <summary>
+            Creates a new HtmlParserProperties.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.#ctor(System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new HtmlParserProperties.
+            </summary>
+            <param name="removeScripts"> Sets the remove script tags flag.</param>
+            <param name="removeStyle"> Sets the remove style tags flag.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.#ctor(System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Creates a new HtmlParserProperties.
+            </summary>
+            <param name="removeScripts"> Sets the remove script tags flag.</param>
+            <param name="removeStyle"> Sets the remove style tags flag.</param>
+            <param name="removeDoctype"> Sets the remove doctype flag.</param>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.RemoveDocumentType">
+            <summary>
+            Gets or sets the remove document type.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.RemoveScriptTags">
+            <summary>
+            Gets or sets the remove script tags.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlParserProperties.RemoveStyleTags">
+            <summary>
+            Gets or sets the remove style tags.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil">
+            <summary>
+            The HtmlQueryUtil class contains logic for querying HTML.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil.#ctor">
+            <summary>
+            Creates a new HtmlQueryUtil.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil.#ctor(System.Boolean)">
+            <summary>
+            Creates a new HtmlQueryUtil.
+            </summary>
+            <param name="cachedDocument"> Sets the caching flag.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil.GetNodes(System.String,System.String)">
+            <summary>
+            Gets a XmlNodeList from the queried HTML.
+            </summary>
+            <param name="data"> The HTML content to query.</param>
+            <param name="query"> The XPath Query.</param>
+            <returns> A XmlNodeList.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil.GetXmlString(System.String,System.String)">
+            <summary>
+            Gets a XML string from the queried HTML.
+            </summary>
+            <param name="data"> The HTML content to query.</param>
+            <param name="query"> The XPath Query.</param>
+            <returns> A XML string.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlCommand.HtmlQueryUtil.AllowDocumentCaching">
+            <summary>
+            Gets or sets the caching setting for the document.
+            </summary>
+        </member>
+        <member name="T:Sgml.SgmlReader">
+            <summary>
+            SgmlReader is an XmlReader API over any SGML document (including built in support for HTML).  
+            </summary>
+        </member>
+        <member name="M:Sgml.SgmlReader.SetBaseUri(System.String)">
+            <summary>
+            The base Uri is used to resolve relative Uri's like the SystemLiteral and
+            Href properties.  This is a method because BaseURI is a read-only
+            property on the base XmlReader class.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.Dtd">
+            <summary>
+            Specify the SgmlDtd object directly.  This allows you to cache the Dtd and share
+            it across multipl SgmlReaders.  To load a DTD from a URL use the SystemLiteral property.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.DocType">
+            <summary>
+            The name of root element specified in the DOCTYPE tag.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.PublicIdentifier">
+            <summary>
+            The PUBLIC identifier in the DOCTYPE tag
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.SystemLiteral">
+            <summary>
+            The SYSTEM literal in the DOCTYPE tag identifying the location of the DTD.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.InternalSubset">
+            <summary>
+            The DTD internal subset in the DOCTYPE tag
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.InputStream">
+            <summary>
+            The input stream containing SGML data to parse.
+            You must specify this property or the Href property before calling Read().
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.WebProxy">
+            <summary>
+            Sometimes you need to specify a proxy server in order to load data via HTTP
+            from outside the firewall.  For example: "itgproxy:80".
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.Href">
+            <summary>
+            Specify the location of the input SGML document as a URL.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.ErrorLog">
+            <summary>
+            DTD validation errors are written to this stream.
+            </summary>
+        </member>
+        <member name="P:Sgml.SgmlReader.ErrorLogFile">
+            <summary>
+            DTD validation errors are written to this log file.
+            </summary>
+        </member>
+    </members>
+</doc>

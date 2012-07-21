@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.Configuration.Inspector</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator">
+            <summary>
+            Contains properties for locating the configuration sections.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator.InspectorSettings">
+            <summary>
+            Gets the application configuration settings.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.ConfigurationSettingsLocator.HttpClientSettings">
+            <summary>
+            Gets the HTTP Client Configuration settings.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration">
+            <summary>
+            Contains the HttpClientConfiguration class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.#ctor">
+            <summary>
+            Creates a new HttpClientConfiguration.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.UserAgent">
+            <summary>
+            Gets or sets the user agent.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.SecurityProtocol">
+            <summary>
+            Gets or sets the security protocol.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.HttpClientConfiguration.KeepAlive">
+            <summary>
+            Gets or sets the keep alive setting.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler">
+            <summary>
+            Contains the HttpClientSectionHandler class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler.#ctor">
+            <summary>
+            Creates a new HttpSectionHandler.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.HttpClientSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            Creates a new configuration section handler.
+            </summary>
+            <param name="parent"> The parent object.</param>
+            <param name="configContext"> The configuration context.</param>
+            <param name="section"> The section handler.</param>
+            <returns> An object with the configuration.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration">
+            <summary>
+            Contains the InspectorConfiguration class.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.ReferenceDataFile">
+            <summary>
+            Gets or sets the references data xml file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.SolutionDataFile">
+            <summary>
+            Gets or sets the solution data xml file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.XssSignatures">
+            <summary>
+            Gets or sets the XSS attack signature list.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.SqlSignatures">
+            <summary>
+            Gets or sets the SQL Injection signature list.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.BasicReportTemplate">
+            <summary>
+            Gets or sets the the basic report template file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.AdvancedReportTemplate">
+            <summary>
+            Gets or sets the the advanced report template file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultSqlTest">
+            <summary>
+            Gets or sets the default SQL Injection test for the easy unit test action.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultXssTest">
+            <summary>
+            Gets or sets the default XSS attack test for the easy unit test action.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Configuration.Inspector.InspectorConfiguration.DefaultBufferOverflowLength">
+            <summary>
+            Gets or sets the default length of the buffer overflow for the easy unit test action.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Configuration.Inspector.InspectorSectionHandler">
+            <summary>
+            Contains the InspectorSectionHandler class.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Configuration.Inspector.InspectorSectionHandler.Create(System.Object,System.Object,System.Xml.XmlNode)">
+            <summary>
+            Creates a new configuration section handler.
+            </summary>
+            <param name="parent"> The parent object.</param>
+            <param name="configContext"> The configuration context.</param>
+            <param name="section"> The section handler.</param>
+            <returns> An object with the configuration.</returns>
+        </member>
+    </members>
+</doc>

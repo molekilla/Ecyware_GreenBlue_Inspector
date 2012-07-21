@@ -1,0 +1,677 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.GreenBlueGUI</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItem">
+            <summary>
+            A MenuItem type that is used to load menus in the GUI.
+            </summary>	
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.ClickDelegate">
+            <summary>
+            Gets or sets the Click delegate.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.ImageIndex">
+            <summary>
+            Gets or sets the image index.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.CheckedChangedDelegate">
+            <summary>
+            Gets or sets the CheckedChanged delegate.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Shortcut">
+            <summary>
+            Gets or sets the shortcut.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Toggle">
+            <summary>
+            Gets or sets the toggle value.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Enabled">
+            <summary>
+            Enables the menu on or off
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Visible">
+            <summary>
+            Displays the menu.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Name">
+            <summary>
+            The name of the control.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Text">
+            <summary>
+            The text to display in menu.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItem.Delimiter">
+            <summary>
+            The delimiter for the menu.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection">
+            <summary>
+            	Represents a strongly-typed collection of key-and-value pairs that are
+            	sorted by the keys and are accessible by key and by index.
+            </summary>
+            <seealso cref="T:System.Collections.SortedList"/>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key added to the <b>MenuItemCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor(System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the <see cref="T:System.IComparable"/>
+            	interface implemented by each key added to the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor(System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor(System.Collections.IComparer,System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor(System.Collections.IDictionary)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.#ctor(System.Collections.IDictionary,System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the specified <see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.System#Collections#IDictionary#Add(System.Object,System.Object)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Add(System.String,Ecyware.GreenBlue.GreenBlueGUI.MenuItem)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Clear">
+            <summary>
+            	Removes all elements from the <b>MenuItemCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Clone">
+            <summary>
+            	Creates a shallow copy of the <b>MenuItemCollection</b>.
+            </summary>
+            <returns>A shallow copy of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.System#Collections#IDictionary#Contains(System.Object)">
+            <summary>
+            	Determines whether the <b>MenuItemCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> contains an element with the specified key; 
+            	otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Contains(System.String)">
+            <summary>
+            	Determines whether the <b>MenuItemCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.ContainsKey(System.String)">
+            <summary>
+            	Determines whether the <b>MenuItemCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.ContainsValue(Ecyware.GreenBlue.GreenBlueGUI.MenuItem)">
+            <summary>
+            	Determines whether the <b>MenuItemCollection</b> contains a specific value.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> contains an element with the specified 
+            	<paramref name="value"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            	Copies the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> elements to a one-dimensional <see cref="T:System.Array"/>
+            	instance at the specified index.
+            </summary>
+            <param name="array">
+            	The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            	<see cref="T:System.Collections.DictionaryEntry"/> objects copied from <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            	The array must have zero-based indexing.
+            </param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex"/> is less than zero.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para><paramref name="array"/> is multidimensional.</para>
+            	<para>-or-</para>
+            	<para><paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.</para>
+            	<para>-or-</para>
+            	<para>The number of elements in the source <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is greater than the 
+            	available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException">
+            	The type of the source <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> cannot be cast automatically to the type
+            	of the destination <paramref name="array"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetByIndex(System.Int32)">
+            <summary>
+            	Gets the value at the specified index of the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the value to get.</param>
+            <returns>The value at the specified index of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IEnumerator"/> that can iterate through the <b>MenuItemCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IDictionaryEnumerator"/> that can iterate through the
+            	<b>MenuItemCollection</b>.		
+            </summary>
+            <returns>An <see cref="T:System.Collections.IDictionaryEnumerator"/> for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetKey(System.Int32)">
+            <summary>
+            	Gets the key at the specified index of the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the key to get.</param>
+            <returns>The key at the specified index of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetKeyList">
+            <summary>
+            	Gets the keys in the <b>MenuItemCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>. Modifications made to the underlying <b>MenuItemCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the keys
+            	of the <b>MenuItemCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Keys"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetValueList">
+            <summary>
+            	Gets the values in the <b>MenuItemCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the values in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>. Modifications made to the underlying <b>MenuItemCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the values
+            	of the <b>MenuItemCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Values"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.IndexOfKey(System.String)">
+            <summary>
+            	Returns the zero-based index of the specified key in the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="key"/>, if <paramref name="key"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>; otherwise, -1.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <remarks>
+            	<para>The elements of a <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> are sorted by the keys either 
+            	according to a specific <see cref="T:System.Collections.IComparer"/> implementation specified when the 
+            	<see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is created or according to the <see cref="T:System.IComparable"/> 
+            	implementation provided by the keys themselves.</para>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> in the correct sort order, and the 
+            	indexing adjusts accordingly. When an element removed, the indexing also adjusts accordingly.
+            	Therefore, the index of a specific key-and-value pair might change as elements are added or 
+            	removed from the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>This method uses a binary search algorithm; therefore, the average execution time is 
+            	proportional to Log2(<i>n</i>), where <i>n</i> is <see cref="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.IndexOfValue(Ecyware.GreenBlue.GreenBlueGUI.MenuItem)">
+            <summary>
+            	Returns the zero-based index of the first occurrence of the specified value in
+            	the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="value"/>, if <paramref name="value"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>; otherwise, -1.
+            </returns>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>The values of the elements of the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> are compared to the 
+            	specified value using the Equals method.</para>
+            	<para>This method uses a linear search; therefore, the average execution time is 
+            	proportional to <see cref="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.System#Collections#IDictionary#Remove(System.Object)">
+            <summary>
+            	Removes the element with the specified key from the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Remove(System.String)">
+            <summary>
+            	Removes the element with the specified key from the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	If the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> does not contain an element with the specified key,
+            	the <b>MenuItemCollection</b> remains unchanged. No exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.RemoveAt(System.Int32)">
+            <summary>
+            	Removes the element at the specified index of the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            	<para>In collections of contiguous elements, such as lists, the elements that
+            	follow the removed element move up to occupy the vacated spot. If the collection is
+            	indexed, the indices of the elements that are moved are also updated.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.SetByIndex(System.Int32,Ecyware.GreenBlue.GreenBlueGUI.MenuItem)">
+            <summary>
+            	Replaces the value at a specific index in the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="index">The zero-based index at which to save <paramref name="value"/>.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItem"/> to save into the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Synchronized(Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection)">
+            <summary>
+            	Returns a synchronized (thread-safe) wrapper for the <b>MenuItemCollection</b>.
+            </summary>
+            <param name="list">The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> to synchronize.</param>
+            <returns>A synchronized (thread-safe) wrapper for the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="list"/> is a null reference.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.TrimToSize">
+            <summary>
+            	Sets the capacity to the actual number of elements in the <b>MenuItemCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>MenuItemCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.System#Collections#IDictionary#Item(System.Object)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>MenuItemCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItem"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Contains(System.String)"/> method first to
+            	see if the key exists.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Item(System.String)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>MenuItemCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItem"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	<para>This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Contains(System.String)"/> method first to
+            	see if the key exists.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Capacity">
+            <summary>
+            	Gets or sets the capacity of the <b>MenuItemCollection</b>.
+            </summary>
+            <value>The number of elements that the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> can contain.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Count">
+            <summary>
+            	Gets the number of elements contained in the <b>MenuItemCollection</b>.
+            </summary>
+            <value>The number of elements contained in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.IsFixedSize">
+            <summary>
+            	Gets a value indicating whether the <b>MenuItemCollection</b> has a fixed size.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> has a fixed size; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.IsReadOnly">
+            <summary>
+            	Gets a value indicating whether the <b>MenuItemCollection</b> is read-only.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is read-only; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.IsSynchronized">
+            <summary>
+            	Gets a value indicating whether access to the <b>MenuItemCollection</b> is
+            	synchronized (thread-safe).
+            </summary>
+            <value>
+            	<b>true</b> if access to the the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/> is 
+            	synchronized (thread-safe); otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Keys">
+            <summary>
+            	Gets the keys in the <b>MenuItemCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>. Modifications made to the underlying <b>MenuItemCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the keys
+            	of the <b>MenuItemCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetKeyList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.SyncRoot">
+            <summary>
+            	Gets an object that can be used to synchronize access to the <b>MenuItemCollection</b>.
+            </summary>
+            <value>An object that can be used to synchronize access to the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.Values">
+            <summary>
+            	Gets the values in the <b>MenuItemCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the values in the <see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection"/>. Modifications made to the underlying <b>MenuItemCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the values
+            	of the <b>MenuItemCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.GreenBlueGUI.MenuItemCollection.GetValueList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="T:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot">
+            <summary>
+            MenuRoot contains MenuItems to be loaded in GUI.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.#ctor">
+            <summary>
+            Creates a new MenuRoot.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.#ctor(System.String,System.String)">
+            <summary>
+            Creates a new MenuRoot.
+            </summary>
+            <param name="name"> The menu name.</param>
+            <param name="text"> The menu text.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.#ctor(System.String,System.String,System.Windows.Forms.Shortcut)">
+            <summary>
+            Creates a new MenuRoot.
+            </summary>
+            <param name="name"> The menu name.</param>
+            <param name="text"> The menu text.</param>
+            <param name="shortcut"> The menu shortcut.</param>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.Shortcut">
+            <summary>
+            Gets or sets the shortcut.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.Name">
+            <summary>
+            The name of the control.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.Text">
+            <summary>
+            The text to display in menu.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.Enabled">
+            <summary>
+            Enables the menu on or off
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.Visible">
+            <summary>
+            Displays the menu.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.MenuRoot.MenuItems">
+            <summary>
+            The MenuItem collection
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.GreenBlueGUI.ToolbarItem">
+            <summary>
+            ToolbarItem.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.GreenBlueGUI.ToolbarItem.#ctor">
+            <summary>
+            Creates a new ToolbarItem.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.ToolbarItem.DropDownDelegate">
+            <summary>
+            Gets or sets the drop down delegate.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.GreenBlueGUI.ToolbarItem.IsDropDown">
+            <summary>
+            Gets or sets the drop down value.
+            </summary>
+        </member>
+    </members>
+</doc>

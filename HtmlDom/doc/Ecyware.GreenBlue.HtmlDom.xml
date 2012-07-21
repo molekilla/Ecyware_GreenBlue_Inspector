@@ -1,0 +1,2235 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.HtmlDom</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlALinkTag">
+            <summary>
+            HtmlOptionTag.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase">
+            <summary>
+            Summary description for HtmlTagBase.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlButtonTag">
+            <summary>
+            Summary description for HtmlButtonTag.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlFormTag.CloneTag">
+            <summary>
+            Clones the current object into a new HtmlFormTag
+            </summary>
+            <returns>A new HtmlFormTag.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlInputTag">
+            <summary>
+            Summary description for HtmlInputTag.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection">
+            <summary>
+            	Represents a strongly-typed collection of key-and-value pairs that are
+            	sorted by the keys and are accessible by key and by index.
+            </summary>
+            <seealso cref="T:System.Collections.SortedList"/>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key added to the <b>HtmlOptionCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor(System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the <see cref="T:System.IComparable"/>
+            	interface implemented by each key added to the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor(System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor(System.Collections.IComparer,System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor(System.Collections.IDictionary)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.#ctor(System.Collections.IDictionary,System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the specified <see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.System#Collections#IDictionary#Add(System.Object,System.Object)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Add(System.String,Ecyware.GreenBlue.HtmlDom.HtmlOptionTag)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Clear">
+            <summary>
+            	Removes all elements from the <b>HtmlOptionCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Clone">
+            <summary>
+            	Creates a shallow copy of the <b>HtmlOptionCollection</b>.
+            </summary>
+            <returns>A shallow copy of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.System#Collections#IDictionary#Contains(System.Object)">
+            <summary>
+            	Determines whether the <b>HtmlOptionCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> contains an element with the specified key; 
+            	otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Contains(System.String)">
+            <summary>
+            	Determines whether the <b>HtmlOptionCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.ContainsKey(System.String)">
+            <summary>
+            	Determines whether the <b>HtmlOptionCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.ContainsValue(Ecyware.GreenBlue.HtmlDom.HtmlOptionTag)">
+            <summary>
+            	Determines whether the <b>HtmlOptionCollection</b> contains a specific value.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> contains an element with the specified 
+            	<paramref name="value"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            	Copies the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> elements to a one-dimensional <see cref="T:System.Array"/>
+            	instance at the specified index.
+            </summary>
+            <param name="array">
+            	The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            	<see cref="T:System.Collections.DictionaryEntry"/> objects copied from <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            	The array must have zero-based indexing.
+            </param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex"/> is less than zero.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para><paramref name="array"/> is multidimensional.</para>
+            	<para>-or-</para>
+            	<para><paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.</para>
+            	<para>-or-</para>
+            	<para>The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is greater than the 
+            	available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException">
+            	The type of the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> cannot be cast automatically to the type
+            	of the destination <paramref name="array"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetByIndex(System.Int32)">
+            <summary>
+            	Gets the value at the specified index of the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the value to get.</param>
+            <returns>The value at the specified index of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IEnumerator"/> that can iterate through the <b>HtmlOptionCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IDictionaryEnumerator"/> that can iterate through the
+            	<b>HtmlOptionCollection</b>.		
+            </summary>
+            <returns>An <see cref="T:System.Collections.IDictionaryEnumerator"/> for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetKey(System.Int32)">
+            <summary>
+            	Gets the key at the specified index of the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the key to get.</param>
+            <returns>The key at the specified index of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetKeyList">
+            <summary>
+            	Gets the keys in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>. Modifications made to the underlying <b>HtmlOptionCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the keys
+            	of the <b>HtmlOptionCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Keys"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetValueList">
+            <summary>
+            	Gets the values in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the values in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>. Modifications made to the underlying <b>HtmlOptionCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the values
+            	of the <b>HtmlOptionCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Values"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.IndexOfKey(System.String)">
+            <summary>
+            	Returns the zero-based index of the specified key in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="key"/>, if <paramref name="key"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>; otherwise, -1.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <remarks>
+            	<para>The elements of a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> are sorted by the keys either 
+            	according to a specific <see cref="T:System.Collections.IComparer"/> implementation specified when the 
+            	<see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is created or according to the <see cref="T:System.IComparable"/> 
+            	implementation provided by the keys themselves.</para>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> in the correct sort order, and the 
+            	indexing adjusts accordingly. When an element removed, the indexing also adjusts accordingly.
+            	Therefore, the index of a specific key-and-value pair might change as elements are added or 
+            	removed from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>This method uses a binary search algorithm; therefore, the average execution time is 
+            	proportional to Log2(<i>n</i>), where <i>n</i> is <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.IndexOfValue(Ecyware.GreenBlue.HtmlDom.HtmlOptionTag)">
+            <summary>
+            	Returns the zero-based index of the first occurrence of the specified value in
+            	the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="value"/>, if <paramref name="value"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>; otherwise, -1.
+            </returns>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>The values of the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> are compared to the 
+            	specified value using the Equals method.</para>
+            	<para>This method uses a linear search; therefore, the average execution time is 
+            	proportional to <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.System#Collections#IDictionary#Remove(System.Object)">
+            <summary>
+            	Removes the element with the specified key from the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Remove(System.String)">
+            <summary>
+            	Removes the element with the specified key from the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	If the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> does not contain an element with the specified key,
+            	the <b>HtmlOptionCollection</b> remains unchanged. No exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.RemoveAt(System.Int32)">
+            <summary>
+            	Removes the element at the specified index of the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            	<para>In collections of contiguous elements, such as lists, the elements that
+            	follow the removed element move up to occupy the vacated spot. If the collection is
+            	indexed, the indices of the elements that are moved are also updated.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.SetByIndex(System.Int32,Ecyware.GreenBlue.HtmlDom.HtmlOptionTag)">
+            <summary>
+            	Replaces the value at a specific index in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="index">The zero-based index at which to save <paramref name="value"/>.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionTag"/> to save into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Synchronized(Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection)">
+            <summary>
+            	Returns a synchronized (thread-safe) wrapper for the <b>HtmlOptionCollection</b>.
+            </summary>
+            <param name="list">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> to synchronize.</param>
+            <returns>A synchronized (thread-safe) wrapper for the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="list"/> is a null reference.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.TrimToSize">
+            <summary>
+            	Sets the capacity to the actual number of elements in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>HtmlOptionCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.System#Collections#IDictionary#Item(System.Object)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionTag"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Contains(System.String)"/> method first to
+            	see if the key exists.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Item(System.String)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionTag"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	<para>This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Contains(System.String)"/> method first to
+            	see if the key exists.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Capacity">
+            <summary>
+            	Gets or sets the capacity of the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>The number of elements that the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> can contain.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Count">
+            <summary>
+            	Gets the number of elements contained in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>The number of elements contained in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.IsFixedSize">
+            <summary>
+            	Gets a value indicating whether the <b>HtmlOptionCollection</b> has a fixed size.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> has a fixed size; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.IsReadOnly">
+            <summary>
+            	Gets a value indicating whether the <b>HtmlOptionCollection</b> is read-only.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is read-only; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.IsSynchronized">
+            <summary>
+            	Gets a value indicating whether access to the <b>HtmlOptionCollection</b> is
+            	synchronized (thread-safe).
+            </summary>
+            <value>
+            	<b>true</b> if access to the the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/> is 
+            	synchronized (thread-safe); otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Keys">
+            <summary>
+            	Gets the keys in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>. Modifications made to the underlying <b>HtmlOptionCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the keys
+            	of the <b>HtmlOptionCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetKeyList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.SyncRoot">
+            <summary>
+            	Gets an object that can be used to synchronize access to the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>An object that can be used to synchronize access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.Values">
+            <summary>
+            	Gets the values in the <b>HtmlOptionCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the values in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection"/>. Modifications made to the underlying <b>HtmlOptionCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the values
+            	of the <b>HtmlOptionCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.HtmlDom.HtmlOptionCollection.GetValueList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlOptionTag">
+            <summary>
+            Summary description for HtmlOptionTag.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlScript">
+            <summary>
+            Summary description for HtmlScript.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection">
+            <summary>
+            Implements a strongly typed collection of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </summary>
+            <remarks>
+            <b>HtmlScriptCollection</b> provides an <see cref="T:System.Collections.ArrayList"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList">
+            <summary>
+            Represents a strongly typed collection of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> 
+            objects that can be individually accessed by index.
+            </summary>
+            <remarks>
+            <b>IHtmlScriptList</b> provides an <see cref="T:System.Collections.IList"/>
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection">
+            <summary>
+            Defines size, enumerators, and synchronization methods for strongly
+            typed collections of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </summary>
+            <remarks>
+            <b>IHtmlScriptCollection</b> provides an <see cref="T:System.Collections.ICollection"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlScript[],System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>. 
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/> is greater 
+            than the available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.
+            </summary>
+            <returns>An <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator"/> 
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerable.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.Count">
+            <summary>
+            Gets the number of elements contained in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.
+            </summary>
+            <value>The number of elements contained in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.Count"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/> is synchronized (thread-safe).
+            </summary>
+            <value><c>true</c> if access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/> is 
+            synchronized (thread-safe); otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.IsSynchronized"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access 
+            to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.
+            </summary>
+            <value>An object that can be used to synchronize access 
+            to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection"/>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.SyncRoot"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Add(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Adds a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> to the end 
+            of the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object 
+            to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> index at which
+            the <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlScriptList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlScriptList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Clear"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Contains(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>
+            contains the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>; otherwise, <c>false</c>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.IndexOf(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object 
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>, if found; otherwise, -1.
+            </returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Insert(System.Int32,Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Inserts a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element into the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which 
+            <paramref name="value"/> should be inserted.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlScriptList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Remove(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlScriptList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlScriptList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.RemoveAt(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.IsFixedSize">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> has a fixed size.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> has a fixed size;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.IsFixedSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.IsReadOnly"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element to get or set.</param>
+            <value>
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element at the specified <paramref name="index"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptList"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.#ctor">
+            <overloads>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> class.
+            </overloads>
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> class
+            that is empty and has the default initial capacity.
+            </summary>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> class
+            that is empty and has the specified initial capacity.
+            </summary>
+            <param name="capacity">The number of elements that the new 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is initially capable of storing.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="capacity"/> is less than zero.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Int32)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.#ctor(Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> class
+            that contains elements copied from the specified collection and
+            that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> 
+            whose elements are copied to the new collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>        
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Collections.ICollection)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.#ctor(Ecyware.GreenBlue.HtmlDom.HtmlScript[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> class
+            that contains elements copied from the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>
+            array and that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="array">An <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> 
+            elements that are copied to the new collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>        
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Collections.ICollection)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Add(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Adds a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object 
+            to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> index at which the 
+            <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#Add(System.Object)">
+            <summary>
+            Adds an <see cref="T:System.Object"/> to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">
+            The object to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> index at which the 
+            <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/> 
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.AddRange(Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection)">
+            <overloads>
+            Adds a range of elements to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </overloads>
+            <summary>
+            Adds the elements of another collection to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> whose elements 
+            should be added to the end of the current collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.AddRange(System.Collections.ICollection)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.AddRange(Ecyware.GreenBlue.HtmlDom.HtmlScript[])">
+            <summary>
+            Adds the elements of a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> array 
+            to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="array">An <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements
+            that should be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.AddRange(System.Collections.ICollection)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.BinarySearch(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Searches the entire sorted <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> for an 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element using the default comparer 
+            and returns the zero-based index of the element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The zero-based index of <paramref name="value"/> in the sorted 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>, if <paramref name="value"/> is found; 
+            otherwise, a negative number, which is the bitwise complement of the index 
+            of the next element that is larger than <paramref name="value"/> or, if there 
+            is no larger element, the bitwise complement of <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            Neither <paramref name="value"/> nor the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> 
+            implement the <see cref="T:System.IComparable"/> interface.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Clear"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Clone">
+            <summary>
+            Creates a shallow copy of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <returns>A shallow copy of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Clone"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Contains(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>
+            contains the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>; otherwise, <c>false</c>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#Contains(System.Object)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> contains the specified element.
+            </summary>
+            <param name="value">The object to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/> 
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlScript[])">
+            <overloads>
+            Copies the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> or a portion of it to a one-dimensional array.
+            </overloads>
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements, starting at the beginning of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentException">
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is greater 
+            than the available space in the destination <paramref name="array"/>.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlScript[],System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is greater than the
+            available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to a one-dimensional <see cref="T:System.Array"/>,
+            starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="array"/> is multidimensional.    
+            </para><para>-or-</para><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is greater than the
+            available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <exception cref="T:System.InvalidCastException">
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> type cannot be cast automatically 
+            to the type of the destination <paramref name="array"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <returns>An <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator"/> 
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/>
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.IndexOf(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object 
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>, if found; otherwise, -1.
+            </returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#IndexOf(System.Object)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:System.Object"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">The object to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>, if found; otherwise, -1.
+            </returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Insert(System.Int32,Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Inserts a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element into the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="value"/> 
+            should be inserted.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts an element into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="value"/> 
+            should be inserted.</param>
+            <param name="value">The object to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.ReadOnly(Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection)">
+            <summary>
+            Returns a read-only wrapper for the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to wrap.</param>    
+            <returns>A read-only wrapper around <paramref name="collection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.ReadOnly(System.Collections.IList)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Remove(Ecyware.GreenBlue.HtmlDom.HtmlScript)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> object
+            to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#Remove(System.Object)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:System.Object"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="value">The object to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.RemoveAt(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="index">The zero-based starting index of the range
+            of elements to remove.</param>
+            <param name="count">The number of elements to remove.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="index"/> and <paramref name="count"/> do not denote a
+            valid range of elements in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="count"/> is less than zero.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.RemoveRange(System.Int32,System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Sort">
+            <summary>
+            Sorts the elements in the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>
+            using the <see cref="T:System.IComparable"/> implementation of each element.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Sort"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Synchronized(Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection)">
+            <summary>
+            Returns a synchronized (thread-safe) wrapper 
+            for the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to synchronize.</param>    
+            <returns>
+            A synchronized (thread-safe) wrapper around <paramref name="collection"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Synchronized(System.Collections.IList)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.ToArray">
+            <summary>
+            Copies the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> to a new
+            <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </summary>
+            <returns>A one-dimensional <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> 
+            elements containing copies of the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.ToArray"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.TrimToSize">
+            <summary>
+            Sets the capacity to the actual number of elements in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlScriptCollection</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.TrimToSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Capacity">
+            <summary>
+            Gets or sets the capacity of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <value>The number of elements that the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> can contain.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <b>Capacity</b> is set to a value that is less than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Capacity"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <value>
+            The number of elements contained in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Count"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.IsFixedSize">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> has a fixed size.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> has a fixed size;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsFixedSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsReadOnly"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> 
+            is synchronized (thread-safe).
+            </summary>
+            <value><c>true</c> if access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is 
+            synchronized (thread-safe); otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsSynchronized"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element to get or set.</param>
+            <value>
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element at the specified <paramref name="index"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.System#Collections#IList#Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <value>
+            The element at the specified <paramref name="index"/>. When the property
+            is set, this value must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException">The property is set to a value
+            that is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/>.</exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize 
+            access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </summary>
+            <value>An object that can be used to synchronize 
+            access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScriptCollection"/>.
+            </value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.SyncRoot"/> for details.</remarks>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator">
+            <summary>
+            Supports type-safe iteration over a collection that 
+            contains <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </summary>
+            <remarks>
+            <b>IHtmlScriptEnumerator</b> provides an <see cref="T:System.Collections.IEnumerator"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> elements.
+            </remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns><c>true</c> if the enumerator was successfully advanced to the next element; 
+            <c>false</c> if the enumerator has passed the end of the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerator.MoveNext"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator.Reset">
+            <summary>
+            Sets the enumerator to its initial position, 
+            which is before the first element in the collection.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerator.Reset"/> for details.</remarks>    
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlScriptEnumerator.Current">
+            <summary>
+            Gets the current <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element in the collection.
+            </summary>
+            <value>The current <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlScript"/> element in the collection.</value>
+            <exception cref="T:System.InvalidOperationException">The enumerator is positioned 
+            before the first element of the collection or after the last element.</exception>    
+            <remarks>Please refer to <see cref="P:System.Collections.IEnumerator.Current"/> for details.</remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlSelectTag">
+            <summary>
+            Summary description for HtmlSelectTag.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList">
+            <summary>
+            Implements a strongly typed collection of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </summary>
+            <remarks>
+            <b>HtmlTagBaseList</b> provides an <see cref="T:System.Collections.ArrayList"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList">
+            <summary>
+            Represents a strongly typed collection of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> 
+            objects that can be individually accessed by index.
+            </summary>
+            <remarks>
+            <b>IHtmlTagBaseList</b> provides an <see cref="T:System.Collections.IList"/>
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection">
+            <summary>
+            Defines size, enumerators, and synchronization methods for strongly
+            typed collections of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </summary>
+            <remarks>
+            <b>IHtmlTagBaseCollection</b> provides an <see cref="T:System.Collections.ICollection"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlTagBase[],System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>. 
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/> is greater 
+            than the available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ICollection.CopyTo(System.Array,System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.
+            </summary>
+            <returns>An <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator"/> 
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerable.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.Count">
+            <summary>
+            Gets the number of elements contained in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.
+            </summary>
+            <value>The number of elements contained in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.Count"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/> is synchronized (thread-safe).
+            </summary>
+            <value><c>true</c> if access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/> is 
+            synchronized (thread-safe); otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.IsSynchronized"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize access 
+            to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.
+            </summary>
+            <value>An object that can be used to synchronize access 
+            to the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection"/>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ICollection.SyncRoot"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Add(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Adds a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> to the end 
+            of the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object 
+            to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> index at which
+            the <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Clear"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Contains(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>
+            contains the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>; otherwise, <c>false</c>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.IndexOf(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object 
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>, if found; otherwise, -1.
+            </returns>
+            <remarks>Please refer to <see cref="M:System.Collections.IList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Insert(System.Int32,Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Inserts a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element into the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which 
+            <paramref name="value"/> should be inserted.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Remove(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>IHtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.IList.RemoveAt(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.IsFixedSize">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> has a fixed size.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> has a fixed size;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.IsFixedSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.IsReadOnly"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element to get or set.</param>
+            <value>
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element at the specified <paramref name="index"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than 
+            <see cref="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseCollection.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseList"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.IList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.#ctor">
+            <overloads>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> class.
+            </overloads>
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> class
+            that is empty and has the default initial capacity.
+            </summary>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> class
+            that is empty and has the specified initial capacity.
+            </summary>
+            <param name="capacity">The number of elements that the new 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is initially capable of storing.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="capacity"/> is less than zero.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Int32)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.#ctor(Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> class
+            that contains elements copied from the specified collection and
+            that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> 
+            whose elements are copied to the new collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>        
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Collections.ICollection)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.#ctor(Ecyware.GreenBlue.HtmlDom.HtmlTagBase[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> class
+            that contains elements copied from the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>
+            array and that has the same initial capacity as the number of elements copied.
+            </summary>
+            <param name="array">An <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> 
+            elements that are copied to the new collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>        
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.#ctor(System.Collections.ICollection)"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Add(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Adds a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object 
+            to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> index at which the 
+            <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#Add(System.Object)">
+            <summary>
+            Adds an <see cref="T:System.Object"/> to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">
+            The object to be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> index at which the 
+            <paramref name="value"/> has been added.</returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/> 
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Add(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.AddRange(Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList)">
+            <overloads>
+            Adds a range of elements to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </overloads>
+            <summary>
+            Adds the elements of another collection to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> whose elements 
+            should be added to the end of the current collection.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.AddRange(System.Collections.ICollection)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.AddRange(Ecyware.GreenBlue.HtmlDom.HtmlTagBase[])">
+            <summary>
+            Adds the elements of a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> array 
+            to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="array">An <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements
+            that should be added to the end of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.AddRange(System.Collections.ICollection)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.BinarySearch(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Searches the entire sorted <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> for an 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element using the default comparer 
+            and returns the zero-based index of the element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>The zero-based index of <paramref name="value"/> in the sorted 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>, if <paramref name="value"/> is found; 
+            otherwise, a negative number, which is the bitwise complement of the index 
+            of the next element that is larger than <paramref name="value"/> or, if there 
+            is no larger element, the bitwise complement of <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            Neither <paramref name="value"/> nor the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> 
+            implement the <see cref="T:System.IComparable"/> interface.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.BinarySearch(System.Int32,System.Int32,System.Object,System.Collections.IComparer)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Clear">
+            <summary>
+            Removes all elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Clear"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Clone">
+            <summary>
+            Creates a shallow copy of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <returns>A shallow copy of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Clone"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Contains(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>
+            contains the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>; otherwise, <c>false</c>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#Contains(System.Object)">
+            <summary>
+            Determines whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> contains the specified element.
+            </summary>
+            <param name="value">The object to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns><c>true</c> if <paramref name="value"/> is found in the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>; otherwise, <c>false</c>.</returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/> 
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Contains(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlTagBase[])">
+            <overloads>
+            Copies the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> or a portion of it to a one-dimensional array.
+            </overloads>
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements, starting at the beginning of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentException">
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is greater 
+            than the available space in the destination <paramref name="array"/>.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.CopyTo(Ecyware.GreenBlue.HtmlDom.HtmlTagBase[],System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to a one-dimensional <see cref="T:System.Array"/>
+            of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements, starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is greater than the
+            available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            Copies the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to a one-dimensional <see cref="T:System.Array"/>,
+            starting at the specified index of the target array.
+            </summary>
+            <param name="array">The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements copied from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            The <b>Array</b> must have zero-based indexing.</param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> 
+            at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="array"/> is a null reference.</exception>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="arrayIndex"/> is less than zero.</exception>    
+            <exception cref="T:System.ArgumentException"><para>
+            <paramref name="array"/> is multidimensional.    
+            </para><para>-or-</para><para>
+            <paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.
+            </para><para>-or-</para><para>
+            The number of elements in the source <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is greater than the
+            available space from <paramref name="arrayIndex"/> to the end of the destination 
+            <paramref name="array"/>.</para></exception>
+            <exception cref="T:System.InvalidCastException">
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> type cannot be cast automatically 
+            to the type of the destination <paramref name="array"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.CopyTo(System.Array)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.GetEnumerator">
+            <summary>
+            Returns an <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <returns>An <see cref="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator"/> 
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Returns an <see cref="T:System.Collections.IEnumerator"/> that can
+            iterate through the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IEnumerator"/>
+            for the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.GetEnumerator"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.IndexOf(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object 
+            to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>, if found; otherwise, -1.
+            </returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#IndexOf(System.Object)">
+            <summary>
+            Returns the zero-based index of the first occurrence of the specified 
+            <see cref="T:System.Object"/> in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The object to locate in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            This argument can be a null reference.
+            </param>    
+            <returns>
+            The zero-based index of the first occurrence of <paramref name="value"/> 
+            in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>, if found; otherwise, -1.
+            </returns>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.IndexOf(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Insert(System.Int32,Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Inserts a <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element into the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="value"/> 
+            should be inserted.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#Insert(System.Int32,System.Object)">
+            <summary>
+            Inserts an element into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="value"/> 
+            should be inserted.</param>
+            <param name="value">The object to insert into the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Insert(System.Int32,System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.ReadOnly(Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList)">
+            <summary>
+            Returns a read-only wrapper for the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to wrap.</param>    
+            <returns>A read-only wrapper around <paramref name="collection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.ReadOnly(System.Collections.IList)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Remove(Ecyware.GreenBlue.HtmlDom.HtmlTagBase)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> object
+            to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#Remove(System.Object)">
+            <summary>
+            Removes the first occurrence of the specified <see cref="T:System.Object"/>
+            from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="value">The object to remove from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            This argument must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            This argument can be a null reference.
+            </param>    
+            <exception cref="T:System.InvalidCastException"><paramref name="value"/>
+            is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>    
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Remove(System.Object)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.RemoveAt(System.Int32)">
+            <summary>
+            Removes the element at the specified index of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.RemoveAt(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.RemoveRange(System.Int32,System.Int32)">
+            <summary>
+            Removes a range of elements from the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="index">The zero-based starting index of the range
+            of elements to remove.</param>
+            <param name="count">The number of elements to remove.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="index"/> and <paramref name="count"/> do not denote a
+            valid range of elements in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="count"/> is less than zero.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.RemoveRange(System.Int32,System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Sort">
+            <summary>
+            Sorts the elements in the entire <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>
+            using the <see cref="T:System.IComparable"/> implementation of each element.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Sort"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Synchronized(Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList)">
+            <summary>
+            Returns a synchronized (thread-safe) wrapper 
+            for the specified <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <param name="collection">The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to synchronize.</param>    
+            <returns>
+            A synchronized (thread-safe) wrapper around <paramref name="collection"/>.
+            </returns>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="collection"/> is a null reference.</exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.Synchronized(System.Collections.IList)"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.ToArray">
+            <summary>
+            Copies the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> to a new
+            <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </summary>
+            <returns>A one-dimensional <see cref="T:System.Array"/> of <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> 
+            elements containing copies of the elements of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.</returns>
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.ToArray"/> for details.</remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.TrimToSize">
+            <summary>
+            Sets the capacity to the actual number of elements in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            <para>The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</para>
+            <para>-or-</para>
+            <para>The <b>HtmlTagBaseList</b> has a fixed size.</para></exception>    
+            <remarks>Please refer to <see cref="M:System.Collections.ArrayList.TrimToSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Capacity">
+            <summary>
+            Gets or sets the capacity of the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <value>The number of elements that the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> can contain.</value>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <b>Capacity</b> is set to a value that is less than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Capacity"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count">
+            <summary>
+            Gets the number of elements contained in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <value>
+            The number of elements contained in the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Count"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.IsFixedSize">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> has a fixed size.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> has a fixed size;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsFixedSize"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.IsReadOnly">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.
+            </summary>
+            <value><c>true</c> if the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only;
+            otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsReadOnly"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.IsSynchronized">
+            <summary>
+            Gets a value indicating whether access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> 
+            is synchronized (thread-safe).
+            </summary>
+            <value><c>true</c> if access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is 
+            synchronized (thread-safe); otherwise, <c>false</c>. The default is <c>false</c>.</value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.IsSynchronized"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Item(System.Int32)">
+            <summary>
+            Gets or sets the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the 
+            <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element to get or set.</param>
+            <value>
+            The <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element at the specified <paramref name="index"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.System#Collections#IList#Item(System.Int32)">
+            <summary>
+            Gets or sets the element at the specified index.
+            </summary>
+            <param name="index">The zero-based index of the element to get or set.</param>
+            <value>
+            The element at the specified <paramref name="index"/>. When the property
+            is set, this value must be compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.
+            </value>    
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> is equal to or greater than <see cref="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.Count"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException">The property is set to a value
+            that is not compatible with <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/>.</exception>
+            <exception cref="T:System.NotSupportedException">
+            The property is set and the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/> is read-only.</exception>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.Item(System.Int32)"/> for details.</remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList.SyncRoot">
+            <summary>
+            Gets an object that can be used to synchronize 
+            access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </summary>
+            <value>An object that can be used to synchronize 
+            access to the <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBaseList"/>.
+            </value>
+            <remarks>Please refer to <see cref="P:System.Collections.ArrayList.SyncRoot"/> for details.</remarks>
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator">
+            <summary>
+            Supports type-safe iteration over a collection that 
+            contains <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </summary>
+            <remarks>
+            <b>IHtmlTagBaseEnumerator</b> provides an <see cref="T:System.Collections.IEnumerator"/> 
+            that is strongly typed for <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> elements.
+            </remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator.MoveNext">
+            <summary>
+            Advances the enumerator to the next element of the collection.
+            </summary>
+            <returns><c>true</c> if the enumerator was successfully advanced to the next element; 
+            <c>false</c> if the enumerator has passed the end of the collection.</returns>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerator.MoveNext"/> for details.</remarks>    
+        </member>
+        <member name="M:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator.Reset">
+            <summary>
+            Sets the enumerator to its initial position, 
+            which is before the first element in the collection.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The collection was modified after the enumerator was created.</exception>
+            <remarks>Please refer to <see cref="M:System.Collections.IEnumerator.Reset"/> for details.</remarks>    
+        </member>
+        <member name="P:Ecyware.GreenBlue.HtmlDom.IHtmlTagBaseEnumerator.Current">
+            <summary>
+            Gets the current <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element in the collection.
+            </summary>
+            <value>The current <see cref="T:Ecyware.GreenBlue.HtmlDom.HtmlTagBase"/> element in the collection.</value>
+            <exception cref="T:System.InvalidOperationException">The enumerator is positioned 
+            before the first element of the collection or after the last element.</exception>    
+            <remarks>Please refer to <see cref="P:System.Collections.IEnumerator.Current"/> for details.</remarks>    
+        </member>
+        <member name="T:Ecyware.GreenBlue.HtmlDom.HtmlTextAreaTag">
+            <summary>
+            Summary description for HtmlTextAreaTag.
+            </summary>
+        </member>
+    </members>
+</doc>

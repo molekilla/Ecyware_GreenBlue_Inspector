@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{46F6DF88-4B69-4672-A234-1FFE95CE14B5}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon />
+    <AssemblyKeyContainerName />
+    <AssemblyName>Ecyware.GreenBlue.Controls</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Ecyware.GreenBlue.Controls</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>doc\Ecyware.GreenBlue.Controls.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>Ecyware.GreenBlue.Controls.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BufferOverflowGenerator\Ecyware.GreenBlue.Utils.csproj">
+      <Name>Ecyware.GreenBlue.Utils</Name>
+      <Project>{557DCB68-183B-4D4A-8CE3-83398F655B43}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecyware.GreenBlue.Configuration\Ecyware.GreenBlue.Configuration.csproj">
+      <Name>Ecyware.GreenBlue.Configuration</Name>
+      <Project>{61B3CAF1-E079-4967-BEE7-2CAD604907AF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecyware.GreenBlue.Engine\Ecyware.GreenBlue.Engine.csproj">
+      <Name>Ecyware.GreenBlue.Engine</Name>
+      <Project>{5C59F497-84B7-455C-80A9-0919833D57FE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenBlueLogic\Ecyware.GreenBlue.Protocols.Http.csproj">
+      <Name>Ecyware.GreenBlue.Protocols.Http</Name>
+      <Project>{73CEB43E-C922-48AE-8A6D-A3FF2EA0321F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="AxInterop.SHDocVw">
+      <Name>AxInterop.SHDocVw</Name>
+      <HintPath>..\..\GBServicesClient\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.CoreLib">
+      <Name>Compona.CoreLib</Name>
+      <HintPath>D:\Program Files\Compona\BIN\Compona.CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.SyntaxBox">
+      <Name>Compona.SyntaxBox</Name>
+      <HintPath>D:\Program Files\Compona\BIN\Compona.SyntaxBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.SyntaxDocument">
+      <Name>Compona.SyntaxDocument</Name>
+      <HintPath>D:\Program Files\Compona\BIN\Compona.SyntaxDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="Ecyware.GreenBlue.LicenseServices.Client">
+      <Name>Ecyware.GreenBlue.LicenseServices.Client</Name>
+      <HintPath>..\ScriptingApplicationLicenseServices.Client\bin\Release\Ecyware.GreenBlue.LicenseServices.Client.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Interop.SHDocVw">
+      <Name>Interop.SHDocVw</Name>
+      <HintPath>..\..\GBServicesClient\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <Name>Microsoft.mshtml</Name>
+      <HintPath>..\..\..\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+      <AssemblyFolderKey>hklm\primary interop assemblies</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="Microsoft.Vsa">
+      <Name>Microsoft.Vsa</Name>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services2">
+      <Name>Microsoft.Web.Services2</Name>
+      <HintPath>..\ScriptingApplicationLicenseServices.Client\bin\Debug\Microsoft.Web.Services2.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplyMenuRootSettingsEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplyMenuSettingsEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplyToolbarSettingsEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BasePluginForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseScriptingDataPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BaseSessionUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ChangeStatusBarEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CookieWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CookieWrapperExtended.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignerPageProvider\DesignerPage.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignerPageProvider\DesignerPageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignerPageProvider\DesignerPagesConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DesignerPageProvider\DesignerPagesSettingsHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FindReplace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FlatPropertyGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FormEditorNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormPageSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GradientLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GradientTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HistoryDiskInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryIndex.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryIndexConfigurationHandler.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HistoryTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="HistoryTreeNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HttpPropertiesWrapper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="InspectorAction.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ListBoxInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadPluginMenuEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuItemCollection.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuRoot.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MenuRootHashtable.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProgressBarControlEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="PropertyBag.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ProxyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestCompleteEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RequestGetEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RequestPostEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\AddWebTransformReferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\CookiesPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\EditHeaderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\FormPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\InputTransformsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\OutputTransformsPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\PostDataPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\SaveApplicationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingApplicationMetadataDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingDataDesigner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingMainPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\ScriptingPageManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\SetRequestTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\SetWebTransformTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\TestRequestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\TransformDocumentationControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\TransformPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\UITransformEditorManager.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebRequestPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebStoreForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebStoreItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Scripting\WebTransformPageUIHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SecureLoginCredentials.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SecureLoginCredentialsSerializer.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ToolbarItem.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TreeEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeEditorNode.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdateSessionEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UpdateSessionRequestArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UrlSpiderControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Win32.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="BasePluginForm.resx">
+      <DependentUpon>BasePluginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseSessionUserControl.resx">
+      <DependentUpon>BaseSessionUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FindReplace.resx">
+      <DependentUpon>FindReplace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FlatPropertyGrid.resx">
+      <DependentUpon>FlatPropertyGrid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditor.resx">
+      <DependentUpon>FormEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPageSettingsDialog.resx">
+      <DependentUpon>FormPageSettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradientLabel.resx">
+      <DependentUpon>GradientLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GradientTextBox.resx">
+      <DependentUpon>GradientTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryTree.resx">
+      <DependentUpon>HistoryTree.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="ListBoxInputForm.resx">
+      <DependentUpon>ListBoxInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProxyDialog.resx">
+      <DependentUpon>ProxyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\AddWebTransformReferences.resx">
+      <DependentUpon>AddWebTransformReferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\CookiesPage.resx">
+      <DependentUpon>CookiesPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\EditHeaderDialog.resx">
+      <DependentUpon>EditHeaderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\FormPage.resx">
+      <DependentUpon>FormPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\InputTransformsPage.resx">
+      <DependentUpon>InputTransformsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\OutputTransformsPage.resx">
+      <DependentUpon>OutputTransformsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\PostDataPage.resx">
+      <DependentUpon>PostDataPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\SaveApplicationDialog.resx">
+      <DependentUpon>SaveApplicationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\ScriptingApplicationMetadataDialog.resx">
+      <DependentUpon>ScriptingApplicationMetadataDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\ScriptingDataDesigner.resx">
+      <DependentUpon>ScriptingDataDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\ScriptingMainPage.resx">
+      <DependentUpon>ScriptingMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\SetRequestTypeDialog.resx">
+      <DependentUpon>SetRequestTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\SetWebTransformTypeDialog.resx">
+      <DependentUpon>SetWebTransformTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\TestRequestDialog.resx">
+      <DependentUpon>TestRequestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\TransformDocumentationControl.resx">
+      <DependentUpon>TransformDocumentationControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\TransformPage.resx">
+      <DependentUpon>TransformPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\WebRequestPage.resx">
+      <DependentUpon>WebRequestPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\WebStoreForm.resx">
+      <DependentUpon>WebStoreForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripting\WebTransformPageUIHelper.resx">
+      <DependentUpon>WebTransformPageUIHelper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TreeEditor.resx">
+      <DependentUpon>TreeEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UrlSpiderControl.resx">
+      <DependentUpon>UrlSpiderControl.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,37 @@
+Microsoft Visual Studio Solution File, Format Version 8.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DasBlogLogin", "DasBlogLogin.csproj", "{13081416-FC83-42FA-9643-695A5FF4B3E0}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{924B3473-1A73-44CF-8F39-D558DACEEE24}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GmailSmtp", "..\..\GmailSmtp\GmailSmtp.csproj", "{4BF67AC6-A08F-4A91-81EA-F423CEA0E16C}"
+	ProjectSection(ProjectDependencies) = postProject
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		Debug = Debug
+		Release = Release
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{13081416-FC83-42FA-9643-695A5FF4B3E0}.Debug.ActiveCfg = Debug|.NET
+		{13081416-FC83-42FA-9643-695A5FF4B3E0}.Debug.Build.0 = Debug|.NET
+		{13081416-FC83-42FA-9643-695A5FF4B3E0}.Release.ActiveCfg = Release|.NET
+		{13081416-FC83-42FA-9643-695A5FF4B3E0}.Release.Build.0 = Release|.NET
+		{924B3473-1A73-44CF-8F39-D558DACEEE24}.Debug.ActiveCfg = Debug|.NET
+		{924B3473-1A73-44CF-8F39-D558DACEEE24}.Debug.Build.0 = Debug|.NET
+		{924B3473-1A73-44CF-8F39-D558DACEEE24}.Release.ActiveCfg = Release|.NET
+		{924B3473-1A73-44CF-8F39-D558DACEEE24}.Release.Build.0 = Release|.NET
+		{4BF67AC6-A08F-4A91-81EA-F423CEA0E16C}.Debug.ActiveCfg = Debug|.NET
+		{4BF67AC6-A08F-4A91-81EA-F423CEA0E16C}.Debug.Build.0 = Debug|.NET
+		{4BF67AC6-A08F-4A91-81EA-F423CEA0E16C}.Release.ActiveCfg = Release|.NET
+		{4BF67AC6-A08F-4A91-81EA-F423CEA0E16C}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

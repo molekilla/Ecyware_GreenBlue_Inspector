@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="HtmlUnitTestReport" targetNamespace="http://ecyware.com/2004/01/HtmlUnitTestReport"
+	elementFormDefault="qualified" xmlns="http://ecyware.com/2004/01/HtmlUnitTestReport" xmlns:mstns="http://ecyware.com/2004/01/HtmlUnitTestReport"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"
+	xmlns:msprop="urn:schemas-microsoft-com:xml-msprop">
+	<xs:element msdata:IsDataSet="true" name="HtmlUnitTestReport">
+		<xs:complexType>
+			<xs:choice maxOccurs="unbounded">
+				<xs:element name="ResponseDocument">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="StatusCode" type="xs:string" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="StatusDescription" type="xs:string" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="Version" type="xs:string" nillable="true" msprop:nullValue="_empty" />
+							<xs:element name="ErrorMessage" type="xs:string" nillable="true" />
+							<xs:element name="RequestType" type="xs:string" nillable="true" />
+							<xs:element name="Date" type="xs:dateTime" nillable="true" />
+							<xs:element name="RequestHeader" type="RequestCollection" maxOccurs="unbounded" />
+							<xs:element name="ResponseHeader" type="ResponseCollection" minOccurs="0" />
+							<xs:element name="HtmlResponse" type="xs:string" minOccurs="0" nillable="true" />
+							<xs:element name="Cookies" type="CookieCollection" minOccurs="0" />
+							<xs:element name="TestItem" type="UnitTestItem" minOccurs="0" />
+							<xs:element name="IsHtmlResponseFile" type="xs:boolean" minOccurs="0" />
+							<xs:element name="SeverityLevel" type="xs:string" minOccurs="0" />
+							<xs:element name="SolutionId" type="xs:string" minOccurs="0" />
+							<xs:element name="ReferenceId" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Hashtable">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" />
+			<xs:element name="Value" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CookieCollection">
+		<xs:sequence>
+			<xs:element name="Domain" type="xs:string" minOccurs="0" />
+			<xs:element name="Name" type="xs:string" minOccurs="0" />
+			<xs:element name="Path" type="xs:string" minOccurs="0" />
+			<xs:element name="Value" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="UnitTestItem">
+		<xs:sequence>
+			<xs:element name="Form" type="HtmlFormTag" minOccurs="0" maxOccurs="1" />
+			<xs:element name="Tests" type="TestCollection" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="HtmlFormTag">
+		<xs:sequence>
+			<xs:element name="Action" type="xs:string" minOccurs="0" />
+			<xs:element name="Method" type="xs:string" minOccurs="0" />
+			<xs:element name="Name" type="xs:string" minOccurs="0" />
+			<xs:element name="Enctype" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TestCollection">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="0" />
+			<xs:element name="BufferLength" type="xs:int" minOccurs="0" nillable="true" />
+			<xs:element name="DataTypeTest" type="xs:string" minOccurs="0" nillable="true" />
+			<xs:element name="TestType" type="xs:string" minOccurs="0" />
+			<xs:element name="TestValue" type="xs:string" minOccurs="0" nillable="true" />
+			<xs:element name="PostData" type="xs:string" minOccurs="0" />
+			<xs:element name="PostDataContainer" type="xs:string" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ResponseCollection">
+		<xs:sequence>
+			<xs:element name="ResponseItems" type="Hashtable" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RequestCollection">
+		<xs:sequence>
+			<xs:element name="RequestItems" type="Hashtable" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

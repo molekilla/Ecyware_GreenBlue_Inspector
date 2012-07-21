@@ -1,0 +1,361 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.Utils</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.Utils.RegExDesignerDialog">
+            <summary>
+            Summary description for RegExDesignerDialog.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.#ctor">
+            <summary>
+            Creates a new RegExDesignerDialog.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.ExecuteRegExFilter(System.String,System.Int32[],System.Int32[],System.Boolean,System.String)">
+            <summary>
+            Executes the regular expression query.
+            </summary>
+            <param name="html"> The html text content.</param>
+            <param name="matchIndices"> The match indices to select.</param>
+            <param name="groupMatchIndices"> The group match indices to select.</param>
+            <param name="applyGroupMatch"> Value for applying the group match selection.</param>
+            <param name="group"> The selected group name.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.GetMatches(System.Text.StringBuilder,System.Text.RegularExpressions.MatchCollection,System.Int32,System.Int32,System.Boolean,System.String,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Gets the regex matches.
+            </summary>
+            <param name="buffer"> The string builder buffer.</param>
+            <param name="matches"> The MatchesCollection type.</param>
+            <param name="matchFrom"></param>
+            <param name="matchTo"></param>
+            <param name="useGroup"></param>
+            <param name="groupName"></param>
+            <param name="groupCaptureFrom"></param>
+            <param name="groupCaptureTo"></param>
+            <param name="withLabels"> If we display labels for matches and captures.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.RegExDesignerDialog.GetMatches(System.String,System.String,System.Int32[],System.Int32[],System.Boolean,System.String)">
+            <summary>
+            Gets the regex matches.
+            </summary>
+            <param name="text"> The html text content.</param>
+            <param name="matchIndices"> The match indices to select.</param>
+            <param name="groupMatchIndices"> The group match indices to select.</param>
+            <param name="applyGroupMatch"> Value for applying the group match selection.</param>
+            <param name="group"> The selected group name.</param>
+            <returns> Returns the matches for regex query.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.RegExDesignerDialog.EditorText">
+            <summary>
+            Gets or sets the Text Editor Text.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.RegExDesignerDialog.RegExQuery">
+            <summary>
+            Gets or sets the regex query.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.RegExDesignerDialog.TextContent">
+            <summary>
+            Gets or sets the text string.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Utils.ServicesProxy">
+            <summary>
+            Summary description for ServicesProxy.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.Utils.ServicesProxy.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.#ctor">
+            <summary>
+            Creates a new client proxy.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.AddUserToken(System.String,System.String)">
+            <summary>
+            Adds the user token.
+            </summary>
+            <param name="username"> The username.</param>
+            <param name="password"> The user password.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.ReadFileToBase64String(System.String)">
+            <summary>
+            Converts the file to a Base64 string.
+            </summary>
+            <param name="file"> The file to convert.</param>
+            <returns> The Base64 string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.HashPassword(System.String,System.String)">
+            <summary>
+            Creates a hash for the password.
+            </summary>
+            <param name="username"> The username.</param>
+            <param name="password"> The password.</param>
+            <returns> A hashed password.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.GetClientProxy">
+            <summary>
+            Gets the proxy client.
+            </summary>
+            <returns> A LicenseServicesClient</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.ServicesProxy.RegisterExceptionEventHandler(Ecyware.GreenBlue.LicenseServices.Client.ExceptionHandler)">
+            <summary>
+            Registers the exception event handler.
+            </summary>
+            <param name="handler"></param>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Utils.XmlXpathDialog">
+            <summary>
+            Summary description for XmlXpathDialog.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.GetXmlString">
+            <summary>
+            Queries the current html.
+            </summary>
+            <returns> Returns a string with the result.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.ResolveNamespaces(System.IO.StringReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A StringReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.ResolveNamespaces(System.Xml.XmlTextReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A XmlTextReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.ResolveNamespaces(System.IO.StringReader,System.Xml.XmlNamespaceManager)">
+            <summary>
+            Resolves the namespaces for a XmlDocument.
+            </summary>
+            <param name="reader"> A StringReader containing the xml data.</param>
+            <param name="namespaceManager"> A XmlNamespaceManager from an existing document.</param>
+            <remarks> To create a XmlNamespaceManager for a document, use XmlNamespaceManager  nsMgr = new XmlNamespaceManager(document.NameTable).</remarks>
+            <returns> An updated XmlNamespaceManager</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.GetXmlString(System.String,System.String)">
+            <summary>
+            Gets a XML string from the queried HTML.
+            </summary>
+            <param name="data"> The HTML content to query.</param>
+            <param name="query"> The XPath Query.</param>
+            <returns> A XML string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XmlXpathDialog.IndentFormatXml(System.Xml.XmlNode)">
+            <summary>
+            Pretty parse the xml.
+            </summary>
+            <param name="node"> A XmlNode to parse.</param>
+            <returns> A formatted xml.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XmlXpathDialog.EditorText">
+            <summary>
+            Gets or sets the Text Editor Text.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XmlXpathDialog.XPathLocation">
+            <summary>
+            Gets or sets the xpath location.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XmlXpathDialog.XmlString">
+            <summary>
+            Gets or sets the xml string.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Utils.XsltCommand">
+            <summary>
+            Summary description for XsltCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltCommand.#ctor">
+            <summary>
+            Creates a new XsltCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltCommand.TransformFromFile(System.String,System.String,System.Collections.Hashtable)">
+            <summary>
+            Transform data.
+            </summary>
+            <param name="xmlData"> The xml data.</param>
+            <param name="template"> The template.</param>
+            <param name="arguments"> Arguments use in the template.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltCommand.TransformFromFile(System.String,System.String)">
+            <summary>
+            Transform data.
+            </summary>
+            <param name="xmlFile"> The xml file to load.</param>
+            <param name="stylesheet"> The style sheet file to load.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltCommand.TransformFromData(System.String,System.String)">
+            <summary>
+            Transform data.
+            </summary>
+            <param name="xmlData"> The xml data to load.</param>
+            <param name="stylesheet"> The style sheet data to load.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Utils.XsltDialog">
+            <summary>
+            Summary description for XsltDialog.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.#ctor">
+            <summary>
+            Creates a new XsltDialog.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.ExecuteXPathFilter(System.String)">
+            <summary>
+            Executes the XPath query.
+            </summary>
+            <param name="html"> The HTML text content.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.GetXmlString">
+            <summary>
+            Queries the current html.
+            </summary>
+            <returns> Returns a string with the result.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.ResolveNamespaces(System.IO.StringReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A StringReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.ResolveNamespaces(System.Xml.XmlTextReader)">
+            <summary>
+            Checks for namespaces found and adds them to a Hashtable.
+            </summary>
+            <param name="reader"> A XmlTextReader representing the html source.</param>
+            <returns> A Hashtable with the namespaces.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.ResolveNamespaces(System.IO.StringReader,System.Xml.XmlNamespaceManager)">
+            <summary>
+            Resolves the namespaces for a XmlDocument.
+            </summary>
+            <param name="reader"> A StringReader containing the xml data.</param>
+            <param name="namespaceManager"> A XmlNamespaceManager from an existing document.</param>
+            <remarks> To create a XmlNamespaceManager for a document, use XmlNamespaceManager  nsMgr = new XmlNamespaceManager(document.NameTable).</remarks>
+            <returns> An updated XmlNamespaceManager</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.GetXmlString(System.String,System.String)">
+            <summary>
+            Gets a XML string from the queried HTML.
+            </summary>
+            <param name="data"> The HTML content to query.</param>
+            <param name="query"> The XPath Query.</param>
+            <returns> A XML string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.IndentFormatXml(System.Xml.XmlNode)">
+            <summary>
+            Pretty parse the xml.
+            </summary>
+            <param name="node"> A XmlNode to parse.</param>
+            <returns> A formatted xml.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltDialog.OpenXsltFile">
+            <summary>
+            Opens a XSLT file.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XsltDialog.XsltText">
+            <summary>
+            Gets or sets the Xstl Editor Text.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XsltDialog.XmlText">
+            <summary>
+            Gets or sets the Xml Editor Text.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XsltDialog.XPathLocation">
+            <summary>
+            Gets or sets the xpath location.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XsltDialog.XmlString">
+            <summary>
+            Gets or sets the xml string.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.Utils.XsltDialog.XsltString">
+            <summary>
+            Gets or sets the xml string.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.Utils.XsltTransformResult">
+            <summary>
+            Summary description for XsltTransformResult.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.Utils.XsltTransformResult.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltTransformResult.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.Utils.XsltTransformResult.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

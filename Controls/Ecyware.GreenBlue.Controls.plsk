@@ -1,0 +1,12 @@
+<SigningKey version="2.0">
+  <RSAKeyValue>
+    <Modulus>w6Dq4fvk5cAl5ugbT/6nymMRgDFHAdQjKHFj20n4dCPetURHExYzU2jWMeQcs4hH3+5MiBYnexMLryPSzmJ8ptvvDMEWAJjl35vH4bXQiLR4OrYShbT+hE/fSZMNqZrvfp+yH7c1Zv5wfp5mmT19hpUGD/rVyfZd+PB9pXzBup0=</Modulus>
+    <Exponent>AQAB</Exponent>
+  </RSAKeyValue>
+  <SNKeys>
+    <Key size="32" e="/xH7lw==" n="gDLjjnC87XM=" />
+    <Key size="48" e="0rv1om9P" n="daj0VPT8AAHa5R9n" />
+    <Key size="64" e="6v55KvnZfuU=" n="auxK50f3/U5ttclwh4OFzQ==" />
+    <Key size="160" e="2npFsKMa0MH9OrFP3aUIE4gVtvc=" n="jmqGlQJVMnzPWbVTrK8joeSWdSb9bLY6kFwf6MkVPj2wmWe+fMS7eQ==" />
+  </SNKeys>
+</SigningKey>

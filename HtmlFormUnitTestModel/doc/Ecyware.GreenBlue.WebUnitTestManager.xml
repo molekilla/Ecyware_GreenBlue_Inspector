@@ -1,0 +1,979 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.WebUnitTestManager</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.ReportEngine.ReportCommand">
+            <summary>
+            Contains the report command logic.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.#ctor">
+            <summary>
+            Creates a new ReportCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.GetSolutionDescription(System.String,System.String)">
+            <summary>
+            Gets the solution description.
+            </summary>
+            <param name="id"> The solution id.</param>
+            <param name="solutionDataFilePath"> The file path to the solution xml file.</param>
+            <returns> A string with the solution description.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.GetReferenceDescription(System.String,System.String)">
+            <summary>
+            Gets the reference description.
+            </summary>
+            <param name="id"> The solution id.</param>
+            <param name="referenceDataFilePath"> The file path to the reference xml file.</param>
+            <returns> A string with the reference description.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.CreateHtmlReport(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.String,System.String,System.String)">
+            <summary>
+            Creates the html report.
+            </summary>
+            <param name="report"> The report type.</param>
+            <param name="reportTemplateFileName"> The name of the report template.</param>
+            <param name="solutionDataFile"> The solution data file.</param>
+            <param name="referenceDataFile"> The reference data file.</param>
+            <returns> The html string.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.BuildHtmlReport(System.Data.DataSet,System.String)">
+            <summary>
+            Creates a report in html using a XSLT Template.
+            </summary>
+            <param name="dataset"> The HtmlUnitTestReport to load.</param>
+            <param name="stylesheet"> The xslt stylesheet to use.</param>
+            <returns> A string containing the html report.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.SerializeToXml(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.IO.Stream)">
+            <summary>
+            Serialize to xml.
+            </summary>
+            <param name="ds"> The HtmlUnitTestReport.</param>
+            <param name="file"> The stream to serialize the xml.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.ReportEngine.ReportCommand.SerializeToSchema(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,System.IO.Stream)">
+            <summary>
+            Serialize to schema.
+            </summary>
+            <param name="ds"> The HtmlUnitTestReport.</param>
+            <param name="file"> The stream to serialize the schema.</param>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester">
+            <summary>
+            Contains the BufferOverflowTester type.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.HtmlFormUnitTestBase">
+            <summary>
+            Contains the base class for the unit tester implementations.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.HtmlFormUnitTestBase.#ctor">
+            <summary>
+            Creates a new HtmlFormUnitTestBase.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.HtmlFormUnitTestBase.UnitTestName">
+            <summary>
+            Gets or sets the UnitTestName.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.IHtmlFormUnitTest">
+            <summary>
+            Contains the interface for implementing a unit tester.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.IHtmlFormUnitTest.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.IHtmlFormUnitTest.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.IHtmlFormUnitTest.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.IHtmlFormUnitTest.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="formTag"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.#ctor(Ecyware.GreenBlue.Engine.BufferOverflowTesterArgs)">
+            <summary>
+            Creates a new BufferOverflowTester.
+            </summary>
+            <param name="args"> The buffer overflow tester arguments.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="form"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.BufferOverflowTester.BufferLength">
+            <summary>
+            Gets or sets the buffer length.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester">
+            <summary>
+            Contains the DataTypesTester type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.#ctor(Ecyware.GreenBlue.Engine.DataTypesTesterArgs)">
+            <summary>
+            Creates a new DataTypesTester.
+            </summary>
+            <param name="args"> The data types tester arguments.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="formTag"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.DataTypesTester.SelectedDataType">
+            <summary>
+            Gets or sets the selected data type.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester">
+            <summary>
+            Contains the PredefinedTester type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester.#ctor(Ecyware.GreenBlue.Engine.PredefinedTesterArgs)">
+            <summary>
+            Creates a new PredefinedTester.
+            </summary>
+            <param name="args"> The predefined tester arguments.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.PredefinedTester.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="formTag"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester">
+            <summary>
+             Contains the SqlInjectionTester type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.#ctor(Ecyware.GreenBlue.Engine.SqlInjectionTesterArgs)">
+            <summary>
+            Creates a new SqlInjectionTester.
+            </summary>
+            <param name="args"> The sql injection tester arguments.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="form"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.SqlInjectionTester.SqlValue">
+            <summary>
+            Gets or sets the sql value.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTester">
+            <summary>
+            Contains the logic for executing unit tests.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.#ctor(Ecyware.GreenBlue.Engine.IHtmlFormUnitTestArgs)">
+            <summary>
+            Creates a new UnitTester.
+            </summary>
+            <param name="args"> The IHtmlFormUnitTestArgs.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.BuildUnitTestPostData(Ecyware.GreenBlue.Engine.UnitTestType,PostDataCollection)">
+            <summary>
+            Builds a unit test for a post data ArrayList.
+            </summary>
+            <param name="testType"> The test type to create.</param>
+            <param name="postData"> The post data values to edit.</param>
+            <returns> An edited post data ArrayList with applied test.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.BuildUnitTestForm(Ecyware.GreenBlue.Engine.UnitTestType,Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Builds a unit test for a form.
+            </summary>
+            <param name="testType"> The test type to create.</param>
+            <param name="form"> The form to edit.</param>
+            <returns> An edited form tag with applied test.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.BuildUnitTestGetRequest(Ecyware.GreenBlue.Engine.UnitTestType,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType,System.Uri)">
+            <summary>
+            Builds a unit test for a uri.
+            </summary>
+            <param name="testType"> The test type</param>
+            <param name="webServerUriType"> The web server url type.</param>
+            <param name="url"> The uri data.</param>
+            <returns> An edited cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.BuildUnitTestCookies(Ecyware.GreenBlue.Engine.UnitTestType,System.Net.CookieCollection)">
+            <summary>
+            Builds a unit test for a cookie collection.
+            </summary>
+            <param name="testType"> The test type.</param>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> An edited cookie collection.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTester.Arguments">
+            <summary>
+            Gets or sets the arguments.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection">
+            <summary>
+            	Represents a strongly-typed collection of key-and-value pairs that are
+            	sorted by the keys and are accessible by key and by index.
+            </summary>
+            <seealso cref="T:System.Collections.SortedList"/>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetFormCollection">
+            <summary>
+            Gets the form tag collection.
+            </summary>
+            <returns> A HtmlFormTagCollection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key added to the <b>UnitTestFormCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor(System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the <see cref="T:System.IComparable"/>
+            	interface implemented by each key added to the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor(System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that is empty, 
+            	has the default initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor(System.Collections.IComparer,System.Int32)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that is empty, 
+            	has the specified initial capacity and is sorted according to the specified 
+            	<see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <param name="capacity">The initial number of elements that the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> can contain.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="capacity"/> is less than zero.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor(System.Collections.IDictionary)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the <see cref="T:System.IComparable"/> interface 
+            	implemented by each key.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.#ctor(System.Collections.IDictionary,System.Collections.IComparer)">
+            <summary>
+            	Initializes a new instance of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> class that contains 
+            	elements copied from the specified dictionary, has the same initial capacity as the 
+            	number of elements copied and is sorted according to the specified <see cref="T:System.Collections.IComparer"/> interface.
+            </summary>
+            <param name="d">The <see cref="T:System.Collections.IDictionary"/> to copy to a new SortedList.</param>
+            <param name="comparer">
+            	<para>The <see cref="T:System.Collections.IComparer"/> implementation to use when comparing keys.</para>
+            	<para>-or-</para>
+            	<para>A null reference, to use the <see cref="T:System.IComparable"/> implementation of each key.</para>
+            </param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="d"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidCastException">
+            	<para>One or more elements in <paramref name="d"/> do not implement the
+            	<see cref="T:System.IComparable"/> interface.</para>
+            	<para>-or-</para>
+            	<para><pararef name="d"/> contains elements of a type not supported by <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.System#Collections#IDictionary#Add(System.Object,System.Object)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Add(System.String,Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            	Adds an element with the specified key and value to the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="key">The key of the element to add.</param>
+            <param name="value">The value of the element to add.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para>An element with the specified <paramref name="key"/> already exists in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> is set to use the <see cref="T:System.IComparable"/> interface,
+            	and <paramref name="key"/> does not implement the <b>IComparable</b> interface.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Clear">
+            <summary>
+            	Removes all elements from the <b>UnitTestFormCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Clone">
+            <summary>
+            	Creates a shallow copy of the <b>UnitTestFormCollection</b>.
+            </summary>
+            <returns>A shallow copy of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.System#Collections#IDictionary#Contains(System.Object)">
+            <summary>
+            	Determines whether the <b>UnitTestFormCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> contains an element with the specified key; 
+            	otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Contains(System.String)">
+            <summary>
+            	Determines whether the <b>UnitTestFormCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.ContainsKey(System.String)">
+            <summary>
+            	Determines whether the <b>UnitTestFormCollection</b> contains a specific key.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> contains an element with the specified 
+            	<paramref name="key"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.ContainsValue(Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            	Determines whether the <b>UnitTestFormCollection</b> contains a specific value.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <returns>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> contains an element with the specified 
+            	<paramref name="value"/>; otherwise, <b>false</b>.
+            </returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.CopyTo(System.Array,System.Int32)">
+            <summary>
+            	Copies the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> elements to a one-dimensional <see cref="T:System.Array"/>
+            	instance at the specified index.
+            </summary>
+            <param name="array">
+            	The one-dimensional <see cref="T:System.Array"/> that is the destination of the
+            	<see cref="T:System.Collections.DictionaryEntry"/> objects copied from <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            	The array must have zero-based indexing.
+            </param>
+            <param name="arrayIndex">The zero-based index in <paramref name="array"/> at which copying begins.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="array"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentOutOfRangeException"><paramref name="arrayIndex"/> is less than zero.</exception>
+            <exception cref="T:System.ArgumentException">
+            	<para><paramref name="array"/> is multidimensional.</para>
+            	<para>-or-</para>
+            	<para><paramref name="arrayIndex"/> is equal to or greater than the length of <paramref name="array"/>.</para>
+            	<para>-or-</para>
+            	<para>The number of elements in the source <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is greater than the 
+            	available space from <paramref name="arrayIndex"/> to the end of the destination <paramref name="array"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidCastException">
+            	The type of the source <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> cannot be cast automatically to the type
+            	of the destination <paramref name="array"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetByIndex(System.Int32)">
+            <summary>
+            	Gets the value at the specified index of the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the value to get.</param>
+            <returns>The value at the specified index of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IEnumerator"/> that can iterate through the <b>UnitTestFormCollection</b>.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetEnumerator">
+            <summary>
+            	Returns an <see cref="T:System.Collections.IDictionaryEnumerator"/> that can iterate through the
+            	<b>UnitTestFormCollection</b>.		
+            </summary>
+            <returns>An <see cref="T:System.Collections.IDictionaryEnumerator"/> for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetKey(System.Int32)">
+            <summary>
+            	Gets the key at the specified index of the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the key to get.</param>
+            <returns>The key at the specified index of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetKeyList">
+            <summary>
+            	Gets the keys in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>. Modifications made to the underlying <b>UnitTestFormCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the keys
+            	of the <b>UnitTestFormCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Keys"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetValueList">
+            <summary>
+            	Gets the values in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <returns>An <see cref="T:System.Collections.IList"/> containing the values in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+            <remarks>
+            	<para>The returned <see cref="T:System.Collections.IList"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>. Modifications made to the underlying <b>UnitTestFormCollection</b>
+            	are immediately reflected in the <b>IList</b>.</para>
+            	<para>The elements of the <b>IList</b> are sorted in the same order as the values
+            	of the <b>UnitTestFormCollection</b>.</para>
+            	<para>Similar to <see cref="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Values"/>, but returns an <b>IList</b>
+            	instead of an <see cref="T:System.Collections.ICollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.IndexOfKey(System.String)">
+            <summary>
+            	Returns the zero-based index of the specified key in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="key">The key to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="key"/>, if <paramref name="key"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>; otherwise, -1.
+            </returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.InvalidOperationException">The comparer throws an exception.</exception>
+            <remarks>
+            	<para>The elements of a <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> are sorted by the keys either 
+            	according to a specific <see cref="T:System.Collections.IComparer"/> implementation specified when the 
+            	<see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is created or according to the <see cref="T:System.IComparable"/> 
+            	implementation provided by the keys themselves.</para>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> in the correct sort order, and the 
+            	indexing adjusts accordingly. When an element removed, the indexing also adjusts accordingly.
+            	Therefore, the index of a specific key-and-value pair might change as elements are added or 
+            	removed from the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>This method uses a binary search algorithm; therefore, the average execution time is 
+            	proportional to Log2(<i>n</i>), where <i>n</i> is <see cref="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.IndexOfValue(Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            	Returns the zero-based index of the first occurrence of the specified value in
+            	the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="value">The value to locate in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <returns>
+            	The zero-based index of <paramref name="value"/>, if <paramref name="value"/> is found in
+            	the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>; otherwise, -1.
+            </returns>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>The values of the elements of the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> are compared to the 
+            	specified value using the Equals method.</para>
+            	<para>This method uses a linear search; therefore, the average execution time is 
+            	proportional to <see cref="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Count"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.System#Collections#IDictionary#Remove(System.Object)">
+            <summary>
+            	Removes the element with the specified key from the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentException">
+            	The <paramref name="key"/> is not of a type supported by the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Remove(System.String)">
+            <summary>
+            	Removes the element with the specified key from the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="key">The key of the element to remove.</param>
+            <exception cref="T:System.ArgumentNullException"><paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	If the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> does not contain an element with the specified key,
+            	the <b>UnitTestFormCollection</b> remains unchanged. No exception is thrown.
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.RemoveAt(System.Int32)">
+            <summary>
+            	Removes the element at the specified index of the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="index">The zero-based index of the element to remove.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            	<para>In collections of contiguous elements, such as lists, the elements that
+            	follow the removed element move up to occupy the vacated spot. If the collection is
+            	indexed, the indices of the elements that are moved are also updated.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.SetByIndex(System.Int32,Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            	Replaces the value at a specific index in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="index">The zero-based index at which to save <paramref name="value"/>.</param>
+            <param name="value">The <see cref="T:Ecyware.GreenBlue.Engine.UnitTestItem"/> to save into the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            	<paramref name="index"/> is outside the range of valid indices for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+            <remarks>
+            	<para>The index sequence is based on the sort sequence. When an element is added, 
+            	it is inserted into <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> in the correct sort order, and 
+            	the indexing adjusts accordingly. When an element removed, the indexing also adjusts 
+            	accordingly. Therefore, the index of a specific key-and-value pair might change as 
+            	elements are added or removed from the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</para>
+            </remarks>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Synchronized(Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection)">
+            <summary>
+            	Returns a synchronized (thread-safe) wrapper for the <b>UnitTestFormCollection</b>.
+            </summary>
+            <param name="list">The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> to synchronize.</param>
+            <returns>A synchronized (thread-safe) wrapper for the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</returns>
+            <exception cref="T:System.ArgumentNullException"><paramref name="list"/> is a null reference.</exception>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.TrimToSize">
+            <summary>
+            	Sets the capacity to the actual number of elements in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <exception cref="T:System.NotSupportedException">
+            	<para>The <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only.</para>
+            	<para>-or-</para>
+            	<para>The <b>UnitTestFormCollection</b> has a fixed size.</para>
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.System#Collections#IDictionary#Item(System.Object)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.Engine.UnitTestItem"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Contains(System.String)"/> method first to
+            	see if the key exists.
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.ArgumentException">
+            	Either the <paramref name="key"/> or the <paramref name="value"/> are not of a type supported by the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Item(System.String)">
+            <summary>
+            	Gets and sets the value associated with a specific key in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>
+            	The <see cref="T:Ecyware.GreenBlue.Engine.UnitTestItem"/> associated with <paramref name="key"/> in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>,
+            	if <paramref name="key"/> is found; otherwise, a <see cref="T:System.NullReferenceException"/> is thrown.
+            </value>
+            <remarks>
+            	<para>This property, unlike its equivalent in <see cref="T:System.Collections.SortedList"/>, does not return
+            	null when a key cannot be found. The reason for this is that the strongly-typed sorted list
+            	template this class is created from allows the value to be a value type (or struct), which cannot
+            	be set to null. Instead, a <see cref="T:System.NullReferenceException"/> is thrown when a key cannot be found.
+            	Callers must either catch this exception, or call the <see cref="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Contains(System.String)"/> method first to
+            	see if the key exists.</para>
+            </remarks>
+            <exception cref="T:System.ArgumentNullException">The <paramref name="key"/> is a null reference.</exception>
+            <exception cref="T:System.NullReferenceException">
+            	<paramref name="key"/> is not found in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.
+            </exception>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Capacity">
+            <summary>
+            	Gets or sets the capacity of the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>The number of elements that the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> can contain.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Count">
+            <summary>
+            	Gets the number of elements contained in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>The number of elements contained in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.IsFixedSize">
+            <summary>
+            	Gets a value indicating whether the <b>UnitTestFormCollection</b> has a fixed size.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> has a fixed size; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.IsReadOnly">
+            <summary>
+            	Gets a value indicating whether the <b>UnitTestFormCollection</b> is read-only.
+            </summary>
+            <value>
+            	<b>true</b> if the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is read-only; otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.IsSynchronized">
+            <summary>
+            	Gets a value indicating whether access to the <b>UnitTestFormCollection</b> is
+            	synchronized (thread-safe).
+            </summary>
+            <value>
+            	<b>true</b> if access to the the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/> is 
+            	synchronized (thread-safe); otherwise, <b>false</b>.
+            	The default is <b>false</b>.
+            </value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Keys">
+            <summary>
+            	Gets the keys in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the keys in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the keys in the 
+            	<see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>. Modifications made to the underlying <b>UnitTestFormCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the keys
+            	of the <b>UnitTestFormCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetKeyList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.SyncRoot">
+            <summary>
+            	Gets an object that can be used to synchronize access to the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>An object that can be used to synchronize access to the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</value>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.Values">
+            <summary>
+            	Gets the values in the <b>UnitTestFormCollection</b>.
+            </summary>
+            <value>An <see cref="T:System.Collections.ICollection"/> containing the values in the <see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>.</value>
+            <remarks>
+            	<para>The <see cref="T:System.Collections.ICollection"/> is a read-only view of the values in the 
+            	<see cref="T:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection"/>. Modifications made to the underlying <b>UnitTestFormCollection</b>
+            	are immediately reflected in the <b>ICollection</b>.</para>
+            	<para>The elements of the <b>ICollection</b> are sorted in the same order as the values
+            	of the <b>UnitTestFormCollection</b>.</para>
+            	<para>Similar to <see cref="M:Ecyware.GreenBlue.WebUnitTestManager.UnitTestFormCollection.GetValueList"/>, but returns an <b>ICollection</b>
+            	instead of an <see cref="T:System.Collections.IList"/>.</para>
+            </remarks>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.UriGenerator">
+            <summary>
+            Contains the logic for generating an uri test according to the web server type.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType">
+            <summary>
+            Contains the different types of web server uri types.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.UrlTranslation">
+            <summary>
+            Uri type for servers that use url translation.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.Normal">
+            <summary>
+            Uri type for servers that use default settings.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.CommaDelimited">
+            <summary>
+            Uri type for servers that use comma delimited urls.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.PipeDelimited">
+            <summary>
+            Uri type for servers that use pipe delimited urls.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.SemicolonDelimited">
+            <summary>
+            Uri type for servers that use semicolon delimited urls.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.ColonDelimited">
+            <summary>
+            Uri type for servers that use colon delimited urls.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.TildeDelimited">
+            <summary>
+            Uri type for servers that use tilde delimited urls.
+            </summary>
+        </member>
+        <member name="F:Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType.QuestionSignLimited">
+            <summary>
+            Uri type for servers that use question mark delimited urls.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester">
+            <summary>
+            Contains the XssInjectionTester type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.#ctor(Ecyware.GreenBlue.Engine.XssInjectionTesterArgs)">
+            <summary>
+            Creates a new XssInjectionTester.
+            </summary>
+            <param name="args"> The xss injection tester arguments.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.FillUri(System.Uri,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType)">
+            <summary>
+            Fills the uri with tests.
+            </summary>
+            <param name="url"> The url.</param>
+            <param name="uriType"> The WebServerUriType type.</param>
+            <returns> The updated uri.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.FillCookies(System.Net.CookieCollection)">
+            <summary>
+            Fills the cookie collection with tests.
+            </summary>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> The updated cookie collection.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.FillPostData(PostDataCollection)">
+            <summary>
+            Fills the post data with tests.
+            </summary>
+            <param name="postData"> The post data hastable.</param>
+            <returns> The updated post data hashtable.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.FillForm(Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Fills the form tag with tests.
+            </summary>
+            <param name="form"> The HtmlFormTag.</param>
+            <returns> The updated HtmlFormTag.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestManager.XssInjectionTester.XssValue">
+            <summary>
+            Gets or sets the xss value.
+            </summary>
+        </member>
+    </members>
+</doc>

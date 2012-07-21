@@ -1,0 +1,32 @@
+TODO (July - August)
+
+1.DONE: GB Brocshure
+2.DONE: Complete 19 August Presentation
+3.DONE: Start 14 Septembre Presentation
+4. Continue with Honeypot but using MSDE.
+
+
+DONE:Put the Load Template File Message in Event Console
+DONE:Possible rename Session Event Console to Unit Test Event Console.
+DONE:Add the Encode Decode in Tools.
+*Leave the Web Unit Test Template integration for release 1.2
+DONE:Update Documentation
+NO:Move images and icons to Common Files.
+*This release is to be 1.1
+*Status Description in Session Designer, width.
+
+For 1.2 (August - December)
+*Integration of Templates with the Session Designer
+*Add Url Generator for other server types and create a Web Server Type list in URL Spider / Session Designer.
+
+
+1.1 Release info
+*Severity Level None Changed to Low.
+*Added the Encode Decode Tool.
+*Added the Web Unit Test Template Manager.
+*Added the Url Spider.
+*Fix a bug with the Address Bar while selecting.
+*Improved WebBrowser Control Performance.
+*Renamed Session Event Console to Unit Test Event Console.
+*Fix the Status Description width in the Session Designer.
+

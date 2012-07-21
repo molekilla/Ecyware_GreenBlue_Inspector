@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Ecyware.GreenBlue.WebUnitTestCommand</name>
+    </assembly>
+    <members>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand">
+            <summary>
+            Contains the Attack Signature Detection Engine (ASDE) logic.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.#ctor">
+            <summary>
+            Creates a new ASDE Command.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.#ctor(Ecyware.GreenBlue.Engine.ResponseBuffer,Ecyware.GreenBlue.Engine.Test)">
+            <summary>
+            Creates a new ASDE Command.
+            </summary>
+            <param name="httpResponse"> The response buffer type.</param>
+            <param name="test"> The test type.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.CheckTestResult">
+            <summary>
+            Checks for the unit test result.
+            </summary>
+            <returns> Returns a UnitTestResult.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.ParseDataForSignature(System.String,Ecyware.GreenBlue.Engine.UnitTestDataContainer)">
+            <summary>
+            Parses the data and looks for the signature. If match found returns true, else false.
+            </summary>
+            <returns> If match found, returns true, else false.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.CheckTestResult(Ecyware.GreenBlue.Engine.ResponseBuffer,Ecyware.GreenBlue.Engine.Test)">
+            <summary>
+            Checks for the unit test result.
+            </summary>
+            <param name="httpResponse"> The response buffer.</param>
+            <param name="test"> The test.</param>
+            <returns> A UnitTestResult.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.HttpResponseBuffer">
+            <summary>
+            Gets or sets the http response buffer.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.AsdeCommand.TestToEvaluate">
+            <summary>
+            Gets or sets the test to evaluate.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.CommandContext">
+            <summary>
+            Contains the definition for the CommandContext type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.CommandContext.#ctor">
+            <summary>
+            Creates a new CommandContext.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.CommandContext.ProtocolProperties">
+            <summary>
+            Gets or sets the HttpProperties.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.CommandContext.Proxy">
+            <summary>
+            Gets or sets the HttpProxy.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder">
+            <summary>
+            Creates the application reports.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.#ctor">
+            <summary>
+            Creates a new ReportBuilder.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.#ctor(System.Boolean)">
+            <summary>
+            Creates a new ReportBuilder.
+            </summary>
+            <param name="saveHtml"> Saves the html as files in report temp folder.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.BuildReport(Ecyware.GreenBlue.Engine.ResponseEventArgs)">
+            <summary>
+            Creates a new report from the response event args.
+            </summary>
+            <param name="response"> The response event args type.</param>
+            <returns> A HtmlUnitTestReport type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.BuildReport(Ecyware.GreenBlue.Engine.ResponseEventArgs,Ecyware.GreenBlue.Engine.UnitTestResult)">
+            <summary>
+            Creates a new report from the response event args and unit test result.
+            </summary>
+            <param name="response"> The response event args.</param>
+            <param name="unitTestResult"> The unit test result.</param>
+            <returns> A HtmlUnitTestReport type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddRequestHeaders(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.ResponseDocumentRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.ResponseBuffer,Ecyware.GreenBlue.Engine.HttpProperties)">
+            <summary>
+            Adds the request headers to the report.
+            </summary>
+            <param name="parentRow"> The ResponseDocumentRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="responseBuffer"> The response buffer.</param>
+            <param name="httpProperties"> The Http Properties type.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddRequestHeaders(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.ResponseDocumentRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Adds the request headers to the report.
+            </summary>
+            <param name="parentRow"> The ResponseDocumentRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="responseBuffer"> The response buffer.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddResponseHeaders(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.ResponseDocumentRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Adds the response headers to the report.
+            </summary>
+            <param name="parentRow"> The ResponseDocumentRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="responseBuffer"> The response buffer.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddCookies(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.ResponseDocumentRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Adds the cookies to the report.
+            </summary>
+            <param name="parentRow"> The ResponseDocumentRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="responseBuffer"> The response buffer.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddReportDocumentRow(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Adds the report document row to a report.
+            </summary>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="responseBuffer"> The response buffer.</param>
+            <returns> A HtmlUnitTestReport type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddTest(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.TestItemRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            Adds the tests to the report.
+            </summary>
+            <param name="parentRow"> The TestItemRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="unitTestItem"> The UnitTestItem type.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddFormTag(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.TestItemRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            Adds a HtmlFormTag to a HtmlUnitTestReport.
+            </summary>
+            <param name="parentRow"> The TestItemRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="unitTestItem"> The UnitTestItem type.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.AddTestItemRow(Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport.ResponseDocumentRow,Ecyware.GreenBlue.ReportEngine.HtmlUnitTestReport,Ecyware.GreenBlue.Engine.UnitTestItem)">
+            <summary>
+            Adds a UnitTestItem to a HtmlUnitTestReport.
+            </summary>
+            <param name="parentRow"> The TestItemRow.</param>
+            <param name="report"> The HtmlUnitTestReport type.</param>
+            <param name="unitTestItem"> The UnitTestItem type.</param>
+            <returns> A TestItemRow type.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.SaveHtml(System.String)">
+            <summary>
+            Saves the html content response.
+            </summary>
+            <param name="html"> The html data to save.</param>
+            <returns> A string containing the file path to the html resource.</returns>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.ReportBuilder.CanSaveHtml">
+            <summary>
+            Gets or sets the save as html file setting.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommandProcessEventHandler">
+            <summary>
+            Displays the process for the session run.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand">
+            <summary>
+            Contains logic for processing sessions.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand">
+            <summary>
+            Contains the abstract class UnitTestCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand.Stop">
+            <summary>
+            Stops the execution.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand.ApplyTestToForm(Ecyware.GreenBlue.Engine.Test,Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag)">
+            <summary>
+            Applies the test to a form.
+            </summary>
+            <param name="test"> The test to apply.</param>
+            <param name="formTag"> The form.</param>
+            <returns> A form with the new values.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand.ApplyTestToCookies(Ecyware.GreenBlue.Engine.Test,System.Net.CookieCollection)">
+            <summary>
+            Applies the test to cookie collection.
+            </summary>
+            <param name="test"> The test to apply.</param>
+            <param name="cookies"> The cookie collection.</param>
+            <returns> A cookie collection with new values.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand.ApplyTestToUrl(Ecyware.GreenBlue.Engine.Test,Ecyware.GreenBlue.WebUnitTestManager.WebServerUriType,System.Uri)">
+            <summary>
+            Applies the test to url.
+            </summary>
+            <param name="test"> The test to apply.</param>
+            <param name="webServerUriType"> The web server uri type.</param>
+            <param name="url"> The url.</param>
+            <returns> A new url.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestCommand.ApplyTestToPostData(Ecyware.GreenBlue.Engine.Test,PostDataCollection)">
+            <summary>
+            Applies the test to a form.
+            </summary>
+            <param name="test"> The test to apply.</param>
+            <param name="postData"> The post data collection.</param>
+            <returns> A form with the new values.</returns>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.IUnitTestCommand">
+            <summary>
+            Contains the interface for IUnitTestCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.#ctor">
+            <summary>
+            Creates a new Session Command.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.#ctor(Ecyware.GreenBlue.Engine.Session,Ecyware.GreenBlue.Engine.Session)">
+            <summary>
+            Creates a new Session Command.
+            </summary>
+            <param name="safeSession"> The safe session object.</param>
+            <param name="unitTestSession"> The session that contains the unit tests.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.StartPostRequest(Ecyware.GreenBlue.Engine.PostForm,System.String,System.Collections.ArrayList,System.Net.CookieCollection,Ecyware.GreenBlue.Engine.HttpProperties,Ecyware.GreenBlue.Engine.HttpState)">
+            <summary>
+            Get Async post request.
+            </summary>
+            <param name="postUrl"> The url to post.</param>
+            <param name="listValues"> The post data values.</param>
+            <param name="cookies"> The cookies.</param>
+            <param name="state"> The http state.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.StartGetRequest(Ecyware.GreenBlue.Engine.GetForm,System.String,System.Collections.ArrayList,System.Net.CookieCollection,Ecyware.GreenBlue.Engine.HttpProperties,Ecyware.GreenBlue.Engine.HttpState)">
+            <summary>
+            Get Async get request.
+            </summary>
+            <param name="getUrl"> The url.</param>
+            <param name="values"> The get values.</param>
+            <param name="cookies"> The cookies.</param>
+            <param name="state"> The http state.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.Run">
+            <summary>
+            Executes the session.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ExecuteNextSafeRequest(Ecyware.GreenBlue.Engine.HttpState)">
+            <summary>
+            Executes the next safe request in order.
+            </summary>
+            <param name="state"> The HTTP state.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ExecuteNextSafeRequest(Ecyware.GreenBlue.Engine.HttpState,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Executes the next safe request in order. Uses session cookies instead of updating them.
+            </summary>
+            <param name="state"> The HTTP state.</param>
+            <param name="responseBufferData"> The ResponseBuffer.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ApplyUrlRedirection(Ecyware.GreenBlue.Engine.HttpState,System.Net.CookieCollection,Ecyware.GreenBlue.Engine.HttpProperties,System.String)">
+            <summary>
+            Redirects to url.
+            </summary>
+            <param name="state"> The HTTP State.</param>
+            <param name="cookies"> The cookie collection.</param>
+            <param name="settings"> The HTTP Settings.</param>
+            <param name="url"> The url to redirect to.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.GetMetaTagUrl(Ecyware.GreenBlue.Engine.ResponseBuffer,System.Uri)">
+            <summary>
+            Gets the meta tag url from http content.
+            </summary>
+            <param name="httpResponse"> The response buffer.</param>
+            <param name="url"> The response uri.</param>
+            <returns> An url found in the META tag.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.AvailableTests">
+            <summary>
+            Returns the avaiable tests in a session.
+            </summary>
+            <returns> The test count for a session.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ApplyRequestTests(Ecyware.GreenBlue.Engine.SessionRequest,Ecyware.GreenBlue.Engine.ResponseBuffer)">
+            <summary>
+            Apply the test requests for a session request.
+            </summary>
+            <param name="sessionRequest"> The session request.</param>
+            <param name="result"> The response buffer result from the safe session.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ExecuteNextSafeRequestById(Ecyware.GreenBlue.Engine.HttpState,Ecyware.GreenBlue.Engine.ResponseBuffer,System.Int32)">
+            <summary>
+            Executes the next safe request in order. Uses the session cookies, instead of updating them.
+            </summary>
+            <param name="state"> The HTTP state.</param>
+            <param name="responseBufferData"> The ResponseBuffer.</param>
+            <param name="loopToId"> The request id to start the loop.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ConvertToPostDataString(System.Collections.ArrayList)">
+            <summary>
+            Convert to post data string.
+            </summary>
+            <param name="al"> The ArrayList to convert.</param>
+            <returns> A string with the post data.</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.UnitTestResult_EndHttp(System.Object,Ecyware.GreenBlue.Engine.ResponseEventArgs)">
+            <summary>
+            Returns the result from the unit test requests.
+            </summary>
+            <param name="sender"> The sender object.</param>
+            <param name="e"> The ResponseEventArgs.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.SafeSessionResult_EndHttp(System.Object,Ecyware.GreenBlue.Engine.ResponseEventArgs)">
+            <summary>
+            Returns the result from the safe requests.
+            </summary>
+            <param name="sender"> The sender object.</param>
+            <param name="e"> The ResponseEventArgs.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.LoopToNextSafeRequest_EndHttp(System.Object,Ecyware.GreenBlue.Engine.ResponseEventArgs)">
+            <summary>
+            Returns the result from the loop requests.
+            </summary>
+            <param name="sender"> The sender object.</param>
+            <param name="e"> The ResponseEventArgs.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.AbortSessionRun(System.String)">
+            <summary>
+            Aborts the session and updates the pending reports.
+            </summary>
+            <param name="message"> The message to show.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.Stop">
+            <summary>
+            Stops the session.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.IsRunning">
+            <summary>
+            Returns if the session is currently executing the run.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.ProtocolProperties">
+            <summary>
+            Gets or sets the HTTP protocol settings.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.Proxy">
+            <summary>
+            Gets or sets the proxy settings.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.SafeSession">
+            <summary>
+            Gets or sets the safe session.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SessionCommand.TestSession">
+            <summary>
+            Gets or sets the test session.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand">
+            <summary>
+             Contains logic for processing quick tests.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.#ctor">
+            <summary>
+            Creates a new SoftTestCommand.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.#ctor(System.Uri,Ecyware.GreenBlue.Engine.HtmlDom.HtmlFormTag,Ecyware.GreenBlue.Engine.HttpProxy,Ecyware.GreenBlue.Engine.HttpProperties,System.String,System.String,System.Int32)">
+            <summary>
+            Creates a new SoftTestCommand.
+            </summary>
+            <param name="url"> The url to apply the test.</param>
+            <param name="form"> The form to apply the tests.</param>
+            <param name="proxySettings"> The http proxy settings.</param>
+            <param name="httpProperties"> The http settings.</param>
+            <param name="sqlTest"> The sql test to use.</param>
+            <param name="xssTest"> The xss test to use.</param>
+            <param name="bufferLength"> The buffer overflow length to use.</param>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.Run">
+            <summary>
+            Runs the command.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.GetTests">
+            <summary>
+            Creates the easy test for the command.
+            </summary>
+            <returns> A test collection</returns>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.httpResponse_EndHttp(System.Object,Ecyware.GreenBlue.Engine.ResponseEventArgs)">
+            <summary>
+            Returns the result from the unit test execution.
+            </summary>
+            <param name="sender"> The sender object.</param>
+            <param name="e"> The ResponseEventArgs type.</param>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.Url">
+            <summary>
+            Gets or sets the url.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.FormTag">
+            <summary>
+            Gets or sets the HtmlFormTag.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.BufferTest">
+            <summary>
+            Gets or sets the buffer test check.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.XssTest">
+            <summary>
+            Gets or sets the XSS test check.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.SqlTest">
+            <summary>
+            Gets or sets the SQL Injection test check.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.ProtocolProperties">
+            <summary>
+            Gets or sets the HttpProperties.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.Proxy">
+            <summary>
+            Gets or sets the HttpProxy.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.SoftTestCommand.IsRunning">
+            <summary>
+            Returns if the session is currently executing the run.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestSessionReportEventHandler">
+            <summary>
+            Handles the session report processing.
+            </summary>
+        </member>
+        <member name="T:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestSessionReportEventArgs">
+            <summary>
+            Contains the UnitTestSessionProcessEventArgs type.
+            </summary>
+        </member>
+        <member name="M:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestSessionReportEventArgs.#ctor">
+            <summary>
+            Creates a new UnitTestSessionProcessEventArgs.
+            </summary>
+        </member>
+        <member name="P:Ecyware.GreenBlue.WebUnitTestCommand.UnitTestSessionReportEventArgs.Report">
+            <summary>
+            Gets or sets the report list.
+            </summary>
+        </member>
+    </members>
+</doc>

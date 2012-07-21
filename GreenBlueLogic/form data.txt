@@ -1,0 +1,34 @@
+-----------------------------7d52903b1507ec
+
+<Content-Disposition: form-data> name="Hello2"
+
+
+Hello
+
+-----------------------------7d52903b1507ec
+\r\n
+Content-Disposition: form-data;name="Hello23"
+\r\n
+\r\n
+Hello
+\r\n
+-----------------------------7d52903b1507ec
+\r\n
+Content-Disposition: form-data; name=\"Hello\"
+\r\n
+\r\n
+\r\n
+-----------------------------7d52903b1507ec
+\r\n
+Content-Disposition: form-data; name=\"World\"
+\r\n
+\r\n
+\r\n
+-----------------------------7d52903b1507ec
+\r\n
+Content-Disposition: form-data; name=\"oFile1\"; filename=\"C:\\images\\GB Splash Screen.psd\"
+\r\n
+Content-Type: application/octet-stream
+\r\n
+\r\n
+\0

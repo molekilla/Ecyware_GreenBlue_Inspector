@@ -1,0 +1,371 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>8.0.30319</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C0C4718E-B2BA-4EE3-A833-D18C76819157}</ProjectGuid>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>..\..\..\images\iconos GB\GB_iconsXP Colours\Icons\gb_logo.ico</ApplicationIcon>
+    <AssemblyKeyContainerName />
+    <AssemblyName>GBDesigner</AssemblyName>
+    <AssemblyOriginatorKeyFile />
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Ecyware.GreenBlue.GreenBlueMain</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>Ecyware.GreenBlue.GreenBlueMain.StartForm</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <OldToolsVersion>0.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug1\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>doc\GBInspector.xml</DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release1\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile />
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>GreenBlueMain.xml</DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn />
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BufferOverflowGenerator\Ecyware.GreenBlue.Utils.csproj">
+      <Name>Ecyware.GreenBlue.Utils</Name>
+      <Project>{557DCB68-183B-4D4A-8CE3-83398F655B43}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Controls\Ecyware.GreenBlue.Controls.csproj">
+      <Name>Ecyware.GreenBlue.Controls</Name>
+      <Project>{46F6DF88-4B69-4672-A234-1FFE95CE14B5}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecyware.GreenBlue.Configuration\Ecyware.GreenBlue.Configuration.csproj">
+      <Name>Ecyware.GreenBlue.Configuration</Name>
+      <Project>{61B3CAF1-E079-4967-BEE7-2CAD604907AF}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\Ecyware.GreenBlue.Engine\Ecyware.GreenBlue.Engine.csproj">
+      <Name>Ecyware.GreenBlue.Engine</Name>
+      <Project>{5C59F497-84B7-455C-80A9-0919833D57FE}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\GreenBlueLogic\Ecyware.GreenBlue.Protocols.Http.csproj">
+      <Name>Ecyware.GreenBlue.Protocols.Http</Name>
+      <Project>{73CEB43E-C922-48AE-8A6D-A3FF2EA0321F}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlFormUnitTester\Ecyware.GreenBlue.WebUnitTestCommand.csproj">
+      <Name>Ecyware.GreenBlue.WebUnitTestCommand</Name>
+      <Project>{E1DC13D1-21B0-4D2D-BAE3-7532570CFED9}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\HtmlFormUnitTestModel\Ecyware.GreenBlue.WebUnitTestManager.csproj">
+      <Name>Ecyware.GreenBlue.WebUnitTestManager</Name>
+      <Project>{134C4297-9A7A-4F44-A56C-65F24DD24A7E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <Reference Include="AxInterop.SHDocVw">
+      <Name>AxInterop.SHDocVw</Name>
+      <HintPath>..\..\GBServicesClient\AxInterop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.C1Zip">
+      <Name>C1.C1Zip</Name>
+      <HintPath>..\..\..\Program Files\ComponentOne Studio.NET\bin\C1.C1Zip.dll</HintPath>
+      <AssemblyFolderKey>hklm\dn\c1studioasp</AssemblyFolderKey>
+    </Reference>
+    <Reference Include="C1.Common">
+      <Name>C1.Common</Name>
+      <HintPath>bin\Release\C1.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="C1.Win.C1Command">
+      <Name>C1.Win.C1Command</Name>
+      <HintPath>bin\Release\C1.Win.C1Command.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandBar">
+      <Name>CommandBar</Name>
+      <HintPath>..\CommandBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.CoreLib">
+      <Name>Compona.CoreLib</Name>
+      <HintPath>..\..\..\Program Files\Compona\BIN\Compona.CoreLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.SyntaxBox">
+      <Name>Compona.SyntaxBox</Name>
+      <HintPath>..\..\..\Program Files\Compona\BIN\Compona.SyntaxBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Compona.SyntaxDocument">
+      <Name>Compona.SyntaxDocument</Name>
+      <HintPath>..\..\..\Program Files\Compona\BIN\Compona.SyntaxDocument.dll</HintPath>
+    </Reference>
+    <Reference Include="DockingSuite">
+      <Name>DockingSuite</Name>
+      <HintPath>..\..\..\microsoft\divil.co.uk\dockingsuite\bin\DockingSuite.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentManager">
+      <Name>DocumentManager</Name>
+      <HintPath>..\..\..\Documents and Settings\rogelio\Desktop\documentmanager-1.1\bin\DocumentManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.SHDocVw">
+      <Name>Interop.SHDocVw</Name>
+      <HintPath>..\..\GBServicesClient\Interop.SHDocVw.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.ExceptionManagement">
+      <Name>Microsoft.ApplicationBlocks.ExceptionManagement</Name>
+      <HintPath>..\..\..\Program Files\Microsoft Application Blocks for .NET\Exception Management\Code\CS\Microsoft.ApplicationBlocks.ExceptionManagement\bin\Release\Microsoft.ApplicationBlocks.ExceptionManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.mshtml">
+      <Name>Microsoft.mshtml</Name>
+      <HintPath>..\..\..\Program Files\Microsoft.NET\Primary Interop Assemblies\Microsoft.mshtml.dll</HintPath>
+      <AssemblyFolderKey>hklm\primary interop assemblies</AssemblyFolderKey>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Design">
+      <Name>System.Design</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Drawing.Design">
+      <Name>System.Drawing.Design</Name>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="BaseStartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BasicAuthenticationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BufferOverflowGeneratorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CookieEditorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncodeDecodeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EncodeDecodeUtil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormConvertionArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormHeuristicArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="FormsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GBInspectorWorkspace.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlDomTransformation.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HtmlPrintForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlQueryForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HtmlXmlTreeForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LicenseInvalidSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadFormsEditorEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LoadLinksEventArgs.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NavigableWebForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReportDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RequestHeaderDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SnifferOptions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SqlTestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartSplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TextEditorForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UnitTestTemplateManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XmlSignaturesEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XssTestDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Content Include="App.ico" />
+    <EmbeddedResource Include="AboutWindow.resx">
+      <DependentUpon>AboutWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ApplicationOptions.resx">
+      <DependentUpon>ApplicationOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseStartForm.resx">
+      <DependentUpon>BaseStartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BasicAuthenticationDialog.resx">
+      <DependentUpon>BasicAuthenticationDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BufferOverflowGeneratorDialog.resx">
+      <DependentUpon>BufferOverflowGeneratorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CookieEditorDialog.resx">
+      <DependentUpon>CookieEditorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncodeDecodeDialog.resx">
+      <DependentUpon>EncodeDecodeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EncodeDecodeUtil.resx">
+      <DependentUpon>EncodeDecodeUtil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsEditor.resx">
+      <DependentUpon>FormsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GBInspector.plsk" />
+    <EmbeddedResource Include="GBInspectorWorkspace.resx">
+      <DependentUpon>GBInspectorWorkspace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlPrintForm.resx">
+      <DependentUpon>HtmlPrintForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlQueryForm.resx">
+      <DependentUpon>HtmlQueryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HtmlXmlTreeForm.resx">
+      <DependentUpon>HtmlXmlTreeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseInvalidSplashScreen.resx">
+      <DependentUpon>LicenseInvalidSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="licenses.licx" />
+    <EmbeddedResource Include="NavigableWebForm.resx">
+      <DependentUpon>NavigableWebForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportDialog.resx">
+      <DependentUpon>ReportDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RequestHeaderDialog.resx">
+      <DependentUpon>RequestHeaderDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SqlTestDialog.resx">
+      <DependentUpon>SqlTestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartSplashScreen.resx">
+      <DependentUpon>StartSplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TextEditorForm.resx">
+      <DependentUpon>TextEditorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnitTestTemplateManager.resx">
+      <DependentUpon>UnitTestTemplateManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XmlSignaturesEditor.resx">
+      <DependentUpon>XmlSignaturesEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XssTestDialog.resx">
+      <DependentUpon>XssTestDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{CF845C55-C321-4742-B673-E6212D061ED9}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent />
+    <PostBuildEvent />
+  </PropertyGroup>
+</Project>
